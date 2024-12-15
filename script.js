@@ -1033,10 +1033,10 @@ cityheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (iscityHeartFilled) {
-    cityheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    cityheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     citypurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    cityheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    cityheart.src = "images/bookmark_fill.png"; // 빈 하트 이미지
     citypurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });

@@ -964,10 +964,10 @@ sasoheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (issasoHeartFilled) {
-    sasoheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    sasoheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     sasopurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    sasoheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    sasoheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     sasopurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -978,9 +978,9 @@ sasobookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (issasoBookmarkFilled) {
-    sasobookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    sasobookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    sasobookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    sasobookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -998,10 +998,10 @@ flowerheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isflowerHeartFilled) {
-    flowerheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    flowerheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     flowerpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    flowerheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    flowerheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     flowerpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1012,9 +1012,9 @@ flowerbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isflowerBookmarkFilled) {
-    flowerbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    flowerbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    flowerbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    flowerbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 

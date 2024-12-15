@@ -989,6 +989,126 @@ overlay.addEventListener("click", () => {
   }
 });
 
+// "내가사랑했던모든남자들에게" 모달 관련 변수
+const boysModal = document.getElementById("내가사랑했던모든남자들에게");
+const boysOpenButton = document.getElementById("내가사랑했던모든남자들에게openModal");
+
+// 내가사랑했던모든남자들에게 모달관련
+function openBoysModal() {
+  overlay.style.display = "block";
+  boysModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    boysModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeBoysModal() {
+  gsap.to(boysModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      boysModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+boysOpenButton.addEventListener("click", openBoysModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeBoysModal();
+  }
+});
+
+// "죄와벌" 모달 관련 변수
+const crimeModal = document.getElementById("죄와벌");
+const crimeOpenButton = document.getElementById("죄와벌openModal");
+
+// 죄와벌 모달관련
+function openCrimeModal() {
+  overlay.style.display = "block";
+  crimeModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    crimeModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeCrimeModal() {
+  gsap.to(crimeModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      crimeModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+crimeOpenButton.addEventListener("click", openCrimeModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeCrimeModal();
+  }
+});
+
 // 이처럼사소한것들!!!!하트와 책갈피 관련 변수
 const sasoheart = document.getElementById("사소-빈하트");
 const sasobookmark = document.getElementById("사소-빈책갈피");
@@ -1466,7 +1586,73 @@ cleanbookmark.addEventListener("click", function () {
   }
 });
 
+// 내가사랑했던모든남자들에게!!!!하트와 책갈피 관련 변수
+const boysheart = document.getElementById("내가-빈하트");
+const boysbookmark = document.getElementById("내가-빈책갈피");
+const boyspurchaseButton = document.getElementById("내가사랑했던모든남자들에게-구매");
+// 초기 상태 설정
+let isboysHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let isboysBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
 
+// 하트 클릭 이벤트
+boysheart.addEventListener("click", function () {
+  isboysHeartFilled = !isboysHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (isboysHeartFilled) {
+    boysheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    boyspurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    boysheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    boyspurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+boysbookmark.addEventListener("click", function () {
+  isboysBookmarkFilled = !isboysBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (isboysBookmarkFilled) {
+    boysbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    boysbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
+
+// 죄와벌!!!!하트와 책갈피 관련 변수
+const crimeheart = document.getElementById("죄-빈하트");
+const crimebookmark = document.getElementById("죄-빈책갈피");
+const crimepurchaseButton = document.getElementById("죄와벌-구매");
+// 초기 상태 설정
+let iscrimeHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let iscrimeBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+crimeheart.addEventListener("click", function () {
+  iscrimeHeartFilled = !iscrimeHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (iscrimeHeartFilled) {
+    crimeheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    crimepurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    crimeheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    crimepurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+crimebookmark.addEventListener("click", function () {
+  iscrimeBookmarkFilled = !iscrimeBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (iscrimeBookmarkFilled) {
+    crimebookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    crimebookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 
 
 //눈먼자들의도시 북마크관련
@@ -1666,5 +1852,33 @@ sasoBookmarkButton.addEventListener("click", function () {
     sasoBookmarkImage.style.display = "none"; // 보이기
   } else {
     sasoBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+//내가사랑했던모든남자들에게 북마크관련
+const boysBookmarkButton = document.getElementById("내가-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const boysBookmarkImage = document.getElementById("내가사랑했던모든남자들에게bookmark");
+
+// 클릭 이벤트 추가
+boysBookmarkButton.addEventListener("click", function () {
+  if (boysBookmarkImage.style.display === "block") {
+    boysBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    boysBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+//죄와벌 북마크관련
+const crimeBookmarkButton = document.getElementById("죄-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const crimeBookmarkImage = document.getElementById("죄와벌bookmark");
+
+// 클릭 이벤트 추가
+crimeBookmarkButton.addEventListener("click", function () {
+  if (crimeBookmarkImage.style.display === "block") {
+    crimeBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    crimeBookmarkImage.style.display = "block"; // 숨기기
   }
 });

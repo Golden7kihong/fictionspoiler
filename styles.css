@@ -254,6 +254,13 @@ body {
   margin-top: 2vh;
   margin-left: 5.7vw;
 }
+#데미안bookmark {
+  display: none;
+  position: relative;
+  width: 72.5vw;
+  margin-top: 2vh;
+  margin-left: 5.7vw;
+}
 #이용설명화살표 {
   position: absolute;
   width: 8vw;
@@ -624,6 +631,20 @@ body {
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
   transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
 }
+#데미안 {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  right: 8vw;
+  top: auto;
+  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
+  width: 100%; /* 모달의 너비 */
+  height: 95%; /* 모달의 높이 */
+  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
+}
 #눈먼자들의도시-제목 {
   position: fixed;
   top: 0.5vh;
@@ -730,6 +751,13 @@ body {
   font-weight: 500;
 }
 #죄와벌-제목 {
+  position: fixed;
+  top: 0.5vh;
+  left: 43vw;
+  font-size: 6vw;
+  font-weight: 500;
+}
+#데미안-제목 {
   position: fixed;
   top: 0.5vh;
   left: 43vw;
@@ -864,6 +892,14 @@ body {
   font-weight: 400;
   line-height: 2.7vh;
 }
+#데미안-저자 {
+  position: fixed;
+  top: 12vh;
+  left: 43vw;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 2.7vh;
+}
 #책표지1 {
   position: fixed;
   height: 25vh;
@@ -940,6 +976,11 @@ body {
   top: 4vh;
 }
 #책표지17 {
+  position: fixed;
+  height: 25vh;
+  top: 4vh;
+}
+#책표지18 {
   position: fixed;
   height: 25vh;
   top: 4vh;
@@ -1050,6 +1091,13 @@ body {
   word-spacing: -0.2vw;
 }
 #죄와벌-본문 {
+  position: fixed;
+  margin-right: 5.4vw;
+  top: 30vh;
+  font-size: 3.4vw;
+  word-spacing: -0.2vw;
+}
+#데미안-본문 {
   position: fixed;
   margin-right: 5.4vw;
   top: 30vh;
@@ -1184,6 +1232,14 @@ body {
   margin-top: 71vh;
   transform: translateX(-50%);
 }
+#데미안-구매 {
+  display: none;
+  position: fixed;
+  width: 65vw;
+  left: 50vw;
+  margin-top: 71vh;
+  transform: translateX(-50%);
+}
 #눈먼자들의도시-content {
   padding: 20px;
 }
@@ -1230,6 +1286,9 @@ body {
   padding: 20px;
 }
 #죄와벌-content {
+  padding: 20px;
+}
+#데미안-content {
   padding: 20px;
 }
 #도시-빈하트 {
@@ -1328,6 +1387,12 @@ body {
   top: 23vh;
   left: 43vw;
 }
+#데미안-빈하트 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 43vw;
+}
 #도시-빈책갈피 {
   position: fixed;
   width: 11vw;
@@ -1419,6 +1484,12 @@ body {
   left: 58vw;
 }
 #죄-빈책갈피 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 58vw;
+}
+#데미안-빈책갈피 {
   position: fixed;
   width: 11vw;
   top: 23vh;

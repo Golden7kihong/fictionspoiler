@@ -1067,10 +1067,10 @@ fingerheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isfingerHeartFilled) {
-    fingerheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    fingerheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     fingerpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    fingerheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    fingerheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     fingerpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1081,9 +1081,9 @@ fingerbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isfingerBookmarkFilled) {
-    fingerbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    fingerbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    fingerbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    fingerbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1101,10 +1101,10 @@ omanheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isomanHeartFilled) {
-    omanheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    omanheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     omanpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    omanheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    omanheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     omanpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1115,9 +1115,9 @@ omanbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isomanBookmarkFilled) {
-    omanbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    omanbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    omanbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    omanbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1135,10 +1135,10 @@ wangheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (iswangHeartFilled) {
-    wangheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    wangheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     wangpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    wangheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    wangheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     wangpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1149,9 +1149,9 @@ wangbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (iswangBookmarkFilled) {
-    wangbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    wangbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    wangbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    wangbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1169,10 +1169,10 @@ naniaheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isnaniaHeartFilled) {
-    naniaheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    naniaheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     naniapurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    naniaheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    naniaheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     naniapurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1183,9 +1183,9 @@ naniabookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isnaniaBookmarkFilled) {
-    naniabookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    naniabookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    naniabookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    naniabookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1203,10 +1203,10 @@ jasalheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isjasalHeartFilled) {
-    jasalheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    jasalheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     jasalpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    jasalheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    jasalheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     jasalpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1217,9 +1217,9 @@ jasalbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isjasalBookmarkFilled) {
-    jasalbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    jasalbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    jasalbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    jasalbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1237,10 +1237,10 @@ gunheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isgunHeartFilled) {
-    gunheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    gunheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     gunpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    gunheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    gunheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     gunpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1251,9 +1251,9 @@ gunbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isgunBookmarkFilled) {
-    gunbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    gunbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    gunbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    gunbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1271,10 +1271,10 @@ lesheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (islesHeartFilled) {
-    lesheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    lesheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     lespurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    lesheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    lesheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     lespurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1285,9 +1285,9 @@ lesbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (islesBookmarkFilled) {
-    lesbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    lesbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    lesbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    lesbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1305,10 +1305,10 @@ changeheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (ischangeHeartFilled) {
-    changeheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    changeheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     changepurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    changeheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    changeheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     changepurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1319,9 +1319,9 @@ changebookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (ischangeBookmarkFilled) {
-    changebookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    changebookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    changebookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    changebookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1339,10 +1339,10 @@ illheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isillHeartFilled) {
-    illheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    illheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     illpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    illheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    illheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     illpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1353,9 +1353,9 @@ illbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isillBookmarkFilled) {
-    illbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    illbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    illbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    illbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1373,10 +1373,10 @@ newheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (isnewHeartFilled) {
-    newheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    newheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     newpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    newheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    newheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     newpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1387,9 +1387,9 @@ newbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (isnewBookmarkFilled) {
-    newbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    newbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    newbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    newbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1407,10 +1407,10 @@ cleanheart.addEventListener("click", function () {
 
   // 하트 이미지 변경
   if (iscleanHeartFilled) {
-    cleanheart.src = "images/꽉찬하트.png"; // 꽉찬 하트 이미지
+    cleanheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     cleanpurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    cleanheart.src = "images/빈하트.png"; // 빈 하트 이미지
+    cleanheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     cleanpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1421,9 +1421,9 @@ cleanbookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (iscleanBookmarkFilled) {
-    cleanbookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    cleanbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    cleanbookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    cleanbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 

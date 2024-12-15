@@ -7,6 +7,45 @@ window.addEventListener('load', function () {
   }, 100);
 });
 
+// GSAP 애니메이션 초기화
+gsap.registerPlugin(ScrollTrigger);
+
+// 애니메이션 설정
+gsap.to("#Main-title", {
+  x: "-100%", // 왼쪽으로 이동
+  opacity: 0, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#Main-title", // 트리거 요소
+    start: "top 30%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -10%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: true, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#Sub-title", {
+  x: "-100%", // 왼쪽으로 이동
+  opacity: 0, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#Main-title", // 트리거 요소
+    start: "top 20%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -40%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: true, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#주석스껄라이크우진돗개", {
+  x: "-100%", // 왼쪽으로 이동
+  opacity: 0, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#Main-title", // 트리거 요소
+    start: "top 12%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -50%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: true, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
 // 이용 설명 화살표 애니메이션
 gsap.to("#이용설명화살표", {
   y: 10, // 아래로 10px 이동

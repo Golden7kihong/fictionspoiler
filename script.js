@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
 
   setTimeout(function () {
     loading.style.display = 'none';
-  }, 5000);
+  }, 10200);
 });
 
 // GSAP 애니메이션 초기화

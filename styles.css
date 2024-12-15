@@ -7,8 +7,10 @@ body {
 .loading {
   position: fixed;
   height: 100%;
-  left: 50vw;
-  transform: translateX(-50%);
+  width: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
   z-index: 9999; /* 다른 요소 위에 나타나도록 설정 */
 }
 #background {

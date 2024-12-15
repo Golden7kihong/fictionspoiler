@@ -1109,6 +1109,65 @@ overlay.addEventListener("click", () => {
   }
 });
 
+// "데미안" 모달 관련 변수
+const demianModal = document.getElementById("데미안");
+const demianOpenButton = document.getElementById("데미안openModal");
+
+// 데미안 모달관련
+function openDemianModal() {
+  overlay.style.display = "block";
+  demianModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    demianModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeDemianModal() {
+  gsap.to(demianModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      demianModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+demianOpenButton.addEventListener("click", openDemianModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeDemianModal();
+  }
+});
 // 이처럼사소한것들!!!!하트와 책갈피 관련 변수
 const sasoheart = document.getElementById("사소-빈하트");
 const sasobookmark = document.getElementById("사소-빈책갈피");
@@ -1654,6 +1713,39 @@ crimebookmark.addEventListener("click", function () {
   }
 });
 
+// 데미안!!!!하트와 책갈피 관련 변수
+const demianheart = document.getElementById("데미안-빈하트");
+const demianbookmark = document.getElementById("데미안-빈책갈피");
+const demianpurchaseButton = document.getElementById("데미안-구매");
+// 초기 상태 설정
+let isdemianHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let isdemianBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+demianheart.addEventListener("click", function () {
+  isdemianHeartFilled = !isdemianHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (isdemianHeartFilled) {
+    demianheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    demianpurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    demianheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    demianpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+demianbookmark.addEventListener("click", function () {
+  isdemianBookmarkFilled = !isdemianBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (isdemianBookmarkFilled) {
+    demianbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    demianbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 
 //눈먼자들의도시 북마크관련
 const cityBookmarkButton = document.getElementById("도시-빈책갈피");
@@ -1880,5 +1972,19 @@ crimeBookmarkButton.addEventListener("click", function () {
     crimeBookmarkImage.style.display = "none"; // 보이기
   } else {
     crimeBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+//데미안 북마크관련
+const demianBookmarkButton = document.getElementById("데미안-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const demianBookmarkImage = document.getElementById("데미안bookmark");
+
+// 클릭 이벤트 추가
+demianBookmarkButton.addEventListener("click", function () {
+  if (demianBookmarkImage.style.display === "block") {
+    demianBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    demianBookmarkImage.style.display = "block"; // 숨기기
   }
 });

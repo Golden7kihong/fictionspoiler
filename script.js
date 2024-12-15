@@ -61,7 +61,7 @@ function openFloatModal() {
       }
     }
   );
-  floatButton.src = "./images/float-close-button.png";
+  floatButton.src = "images/float-close-button.png";
 }
 
 function closeFloatModal() {

@@ -604,28 +604,28 @@ body {
 #나니아연대기-제목 {
   position: fixed;
   top: 0.5vh;
-  left: 42vw;
+  left: 43vw;
   font-size: 6vw;
   font-weight: 500;
 }
 #자살클럽-제목 {
   position: fixed;
   top: 0.5vh;
-  left: 40vw;
+  left: 40.5vw;
   font-size: 6vw;
   font-weight: 500;
 }
 #총균쇠-제목 {
   position: fixed;
   top: 0.5vh;
-  left: 42vw;
+  left: 43vw;
   font-size: 6vw;
   font-weight: 500;
 }
 #레미제라블-제목 {
   position: fixed;
   top: 0.5vh;
-  left: 43vw;
+  left: 44vw;
   font-size: 6vw;
   font-weight: 500;
 }
@@ -639,21 +639,21 @@ body {
 #멋진신세계-제목 {
   position: fixed;
   top: 0.5vh;
-  left: 41vw;
+  left: 42vw;
   font-size: 6vw;
   font-weight: 500;
 }
 #일구팔사-제목 {
   position: fixed;
   top: 0.5vh;
-  left: 38vw;
+  left: 37.5vw;
   font-size: 6vw;
   font-weight: 500;
 }
 #비밀의화원-제목 {
   position: fixed;
   top: 0.5vh;
-  left: 41vw;
+  left: 42vw;
   font-size: 6vw;
   font-weight: 500;
 }
@@ -706,7 +706,7 @@ body {
 #나니아연대기-저자 {
   position: fixed;
   top: 7vh;
-  left: 42vw;
+  left: 43vw;
   font-size: 4vw;
   font-weight: 400;
   line-height: 2.7vh;
@@ -714,7 +714,7 @@ body {
 #자살클럽-저자 {
   position: fixed;
   top: 7vh;
-  left: 40vw;
+  left: 40.5vw;
   font-size: 4vw;
   font-weight: 400;
   line-height: 2.7vh;
@@ -722,7 +722,7 @@ body {
 #총균쇠-저자 {
   position: fixed;
   top: 7vh;
-  left: 42vw;
+  left: 43vw;
   font-size: 4vw;
   font-weight: 400;
   line-height: 2.7vh;
@@ -730,7 +730,7 @@ body {
 #레미제라블-저자 {
   position: fixed;
   top: 7vh;
-  left: 43vw;
+  left: 44vw;
   font-size: 4vw;
   font-weight: 400;
   line-height: 2.7vh;
@@ -746,7 +746,7 @@ body {
 #멋진신세계-저자 {
   position: fixed;
   top: 7vh;
-  left: 41vw;
+  left: 42vw;
   font-size: 4vw;
   font-weight: 400;
   line-height: 2.7vh;
@@ -754,7 +754,7 @@ body {
 #일구팔사-저자 {
   position: fixed;
   top: 7vh;
-  left: 38vw;
+  left: 37.5vw;
   font-size: 4vw;
   font-weight: 400;
   line-height: 2.7vh;
@@ -762,7 +762,7 @@ body {
 #비밀의화원-저자 {
   position: fixed;
   top: 7vh;
-  left: 41vw;
+  left: 42vw;
   font-size: 4vw;
   font-weight: 400;
   line-height: 2.7vh;
@@ -934,7 +934,7 @@ body {
   position: fixed;
   margin-right: 5.4vw;
   top: 30vh;
-  font-size: 3.2vw;
+  font-size: 3.4vw;
   word-spacing: -0.2vw;
 }
 #죽은자의집청소-본문 {
@@ -1108,168 +1108,168 @@ body {
 #도시-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 41vw;
 }
 #핑거-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 41vw;
 }
 #오만-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 37vw;
 }
 #왕자-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 41vw;
 }
 #나니아-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 42vw;
+  top: 23vh;
+  left: 43vw;
 }
 #총-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 42vw;
+  top: 23vh;
+  left: 43vw;
 }
 #자살-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 40vw;
+  top: 23vh;
+  left: 40.5vw;
 }
 #레미-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 43vw;
+  top: 23vh;
+  left: 44vw;
 }
 #변-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 38vw;
 }
 #신세계-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 41vw;
 }
 #일구팔사-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 38vw;
+  top: 23vh;
+  left: 37.5vw;
 }
 #화원-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 41vw;
+  top: 23vh;
+  left: 42vw;
 }
 #청소-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 42vw;
 }
 #사소-빈하트 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
+  top: 23vh;
   left: 42vw;
 }
 #도시-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 58vw;
+  top: 23vh;
+  left: 56vw;
 }
 #핑거-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 58vw;
+  top: 23vh;
+  left: 56vw;
 }
 #오만-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 54vw;
+  top: 23vh;
+  left: 52vw;
 }
 #왕자-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 58vw;
+  top: 23vh;
+  left: 56vw;
 }
 #나니아-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 59vw;
+  top: 23vh;
+  left: 58vw;
 }
 #자살-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 57vw;
+  top: 23vh;
+  left: 55.5vw;
 }
 #총-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 59vw;
+  top: 23vh;
+  left: 58vw;
 }
 #레미-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 60vw;
+  top: 23vh;
+  left: 59vw;
 }
 #변-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 55vw;
+  top: 23vh;
+  left: 53vw;
 }
 #신세계-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 58vw;
+  top: 23vh;
+  left: 56vw;
 }
 #일구팔사-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 55vw;
+  top: 23vh;
+  left: 52.5vw;
 }
 #화원-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 58vw;
+  top: 23vh;
+  left: 57vw;
 }
 #청소-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 59vw;
+  top: 23vh;
+  left: 57vw;
 }
 #사소-빈책갈피 {
   position: fixed;
   width: 11vw;
-  top: 22vh;
-  left: 59vw;
+  top: 23vh;
+  left: 57vw;
 }

@@ -90,7 +90,7 @@ function closeFloatModal() {
     }
   });
 
-  floatButton.src = "images/플로팅버튼.png";
+  floatButton.src = "images/float_button.png";
 }
 
 function toggleFloatModal() {

@@ -19,7 +19,7 @@ gsap.to("#Main-title", {
     start: "top 30%", // 스크롤 시작 지점 (화면의 80% 아래)
     end: "top -10%", // 스크롤 종료 지점 (화면의 20% 아래)
     scrub: true, // 스크롤에 따라 부드럽게 동작
-    markers: true, // 디버그용 마커 (필요 없으면 제거)
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
   },
 });
 
@@ -31,7 +31,7 @@ gsap.to("#Sub-title", {
     start: "top 20%", // 스크롤 시작 지점 (화면의 80% 아래)
     end: "top -40%", // 스크롤 종료 지점 (화면의 20% 아래)
     scrub: true, // 스크롤에 따라 부드럽게 동작
-    markers: true, // 디버그용 마커 (필요 없으면 제거)
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
   },
 });
 
@@ -40,10 +40,10 @@ gsap.to("#주석스껄라이크우진돗개", {
   opacity: 0, // 점차 투명해짐
   scrollTrigger: {
     trigger: "#Main-title", // 트리거 요소
-    start: "top 12%", // 스크롤 시작 지점 (화면의 80% 아래)
-    end: "top -50%", // 스크롤 종료 지점 (화면의 20% 아래)
+    start: "top 3%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -76%", // 스크롤 종료 지점 (화면의 20% 아래)
     scrub: true, // 스크롤에 따라 부드럽게 동작
-    markers: true, // 디버그용 마커 (필요 없으면 제거)
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
   },
 });
 // 이용 설명 화살표 애니메이션

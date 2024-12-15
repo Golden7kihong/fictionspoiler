@@ -1036,7 +1036,7 @@ cityheart.addEventListener("click", function () {
     cityheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
     citypurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    cityheart.src = "images/bookmark_fill.png"; // 빈 하트 이미지
+    cityheart.src = "images/heart_empty.png"; // 빈 하트 이미지
     citypurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
@@ -1047,9 +1047,9 @@ citybookmark.addEventListener("click", function () {
 
   // 책갈피 이미지 변경
   if (iscityBookmarkFilled) {
-    citybookmark.src = "images/꽉찬책갈피.png"; // 꽉찬 책갈피 이미지
+    citybookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    citybookmark.src = "images/빈책갈피.png"; // 빈 책갈피 이미지
+    citybookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 

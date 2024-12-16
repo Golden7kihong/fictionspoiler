@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
 
   setTimeout(function () {
     loading.style.display = 'none';
-  }, 10000);
+  }, 300);
 });
 
 // GSAP 애니메이션 초기화
@@ -1290,7 +1290,65 @@ overlay.addEventListener("click", () => {
   }
 });
 
+// "나는전설이다" 모달 관련 변수
+const legendModal = document.getElementById("나는전설이다");
+const legendOpenButton = document.getElementById("나는전설이다openModal");
 
+// 나는전설이다 모달관련
+function openLegendModal() {
+  overlay.style.display = "block";
+  legendModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    legendModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeLegendModal() {
+  gsap.to(legendModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      legendModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+legendOpenButton.addEventListener("click", openLegendModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeLegendModal();
+  }
+});
 
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -1946,6 +2004,39 @@ mockbookmark.addEventListener("click", function () {
   }
 });
 
+// 나는전설이다!!!!하트와 책갈피 관련 변수
+const legendheart = document.getElementById("전설-빈하트");
+const legendbookmark = document.getElementById("전설-빈책갈피");
+const legendpurchaseButton = document.getElementById("나는전설이다-구매");
+// 초기 상태 설정
+let islegendHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let islegendBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+legendheart.addEventListener("click", function () {
+  islegendHeartFilled = !islegendHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (islegendHeartFilled) {
+    legendheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    legendpurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    legendheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    legendpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+legendbookmark.addEventListener("click", function () {
+  islegendBookmarkFilled = !islegendBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (islegendBookmarkFilled) {
+    legendbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    legendbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2223,5 +2314,20 @@ mockBookmarkButton.addEventListener("click", function () {
     mockBookmarkImage.style.display = "none"; // 보이기
   } else {
     mockBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 나는전설이다 북마크관련
+const legendBookmarkButton = document.getElementById("전설-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const legendBookmarkImage = document.getElementById("나는전설이다bookmark");
+
+// 클릭 이벤트 추가
+legendBookmarkButton.addEventListener("click", function () {
+  if (legendBookmarkImage.style.display === "block") {
+    legendBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    legendBookmarkImage.style.display = "block"; // 숨기기
   }
 });

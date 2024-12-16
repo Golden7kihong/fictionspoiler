@@ -1530,6 +1530,124 @@ overlay.addEventListener("click", () => {
   }
 });
 
+// "안나" 모달 관련 변수
+const annaModal = document.getElementById("안나카레니나");
+const annaOpenButton = document.getElementById("안나카레니나openModal");
+
+// 안나 모달관련
+function openAnnaModal() {
+  overlay.style.display = "block";
+  annaModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    annaModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeAnnaModal() {
+  gsap.to(annaModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      annaModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+annaOpenButton.addEventListener("click", openAnnaModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeAnnaModal();
+  }
+});
+// "폭풍" 모달 관련 변수
+const stormModal = document.getElementById("폭풍의언덕");
+const stormOpenButton = document.getElementById("폭풍의언덕openModal");
+
+// 폭풍 모달관련
+function openStormModal() {
+  overlay.style.display = "block";
+  stormModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    stormModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeStormModal() {
+  gsap.to(stormModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      stormModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+stormOpenButton.addEventListener("click", openStormModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeStormModal();
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2319,6 +2437,73 @@ oldbookmark.addEventListener("click", function () {
     oldbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
+// 안나!!!!하트와 책갈피 관련 변수
+const annaheart = document.getElementById("안나-빈하트");
+const annabookmark = document.getElementById("안나-빈책갈피");
+const annapurchaseButton = document.getElementById("안나카레니나-구매");
+// 초기 상태 설정
+let isannaHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let isannaBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+annaheart.addEventListener("click", function () {
+  isannaHeartFilled = !isannaHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (isannaHeartFilled) {
+    annaheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    annapurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    annaheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    annapurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+annabookmark.addEventListener("click", function () {
+  isannaBookmarkFilled = !isannaBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (isannaBookmarkFilled) {
+    annabookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    annabookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
+
+// 폭풍!!!!하트와 책갈피 관련 변수
+const stormheart = document.getElementById("폭풍-빈하트");
+const stormbookmark = document.getElementById("폭풍-빈책갈피");
+const stormpurchaseButton = document.getElementById("폭풍의언덕-구매");
+// 초기 상태 설정
+let isstormHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let isstormBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+stormheart.addEventListener("click", function () {
+  isstormHeartFilled = !isstormHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (isstormHeartFilled) {
+    stormheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    stormpurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    stormheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    stormpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+stormbookmark.addEventListener("click", function () {
+  isstormBookmarkFilled = !isstormBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (isstormBookmarkFilled) {
+    stormbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    stormbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2658,3 +2843,32 @@ oldBookmarkButton.addEventListener("click", function () {
   }
 });
 
+// 안나 북마크관련
+const annaBookmarkButton = document.getElementById("안나-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const annaBookmarkImage = document.getElementById("안나카레니나bookmark");
+
+// 클릭 이벤트 추가
+annaBookmarkButton.addEventListener("click", function () {
+  if (annaBookmarkImage.style.display === "block") {
+    annaBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    annaBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 폭풍 북마크관련
+const stormBookmarkButton = document.getElementById("폭풍-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const stormBookmarkImage = document.getElementById("폭풍의언덕bookmark");
+
+// 클릭 이벤트 추가
+stormBookmarkButton.addEventListener("click", function () {
+  if (stormBookmarkImage.style.display === "block") {
+    stormBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    stormBookmarkImage.style.display = "block"; // 숨기기
+  }
+});

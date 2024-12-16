@@ -1708,6 +1708,125 @@ overlay.addEventListener("click", () => {
   }
 });
 
+// "두도시" 모달 관련 변수
+const dosiModal = document.getElementById("두도시이야기");
+const dosiOpenButton = document.getElementById("두도시이야기openModal");
+
+// 두도시 모달관련
+function openDosiModal() {
+  overlay.style.display = "block";
+  dosiModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    dosiModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeDosiModal() {
+  gsap.to(dosiModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      dosiModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+dosiOpenButton.addEventListener("click", openDosiModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeDosiModal();
+  }
+});
+
+// "살인자들의섬" 모달 관련 변수
+const killModal = document.getElementById("살인자들의섬");
+const killOpenButton = document.getElementById("살인자들의섬openModal");
+
+// 눈먼자들의도시 모달관련
+function openKillModal() {
+  overlay.style.display = "block";
+  killModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    killModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeKillModal() {
+  gsap.to(killModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      killModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+killOpenButton.addEventListener("click", openKillModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeKillModal();
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2598,6 +2717,74 @@ humanbookmark.addEventListener("click", function () {
     humanbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
+
+// 두도시!!!!하트와 책갈피 관련 변수
+const dosiheart = document.getElementById("두도-빈하트");
+const dosibookmark = document.getElementById("두도-빈책갈피");
+const dosipurchaseButton = document.getElementById("두도시이야기-구매");
+// 초기 상태 설정
+let isdosiHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let isdosiBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+dosiheart.addEventListener("click", function () {
+  isdosiHeartFilled = !isdosiHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (isdosiHeartFilled) {
+    dosiheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    dosipurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    dosiheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    dosipurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+dosibookmark.addEventListener("click", function () {
+  isdosiBookmarkFilled = !isdosiBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (isdosiBookmarkFilled) {
+    dosibookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    dosibookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
+
+// 살인자들의섬!!!!하트와 책갈피 관련 변수
+const killheart = document.getElementById("살인-빈하트");
+const killbookmark = document.getElementById("살인-빈책갈피");
+const killpurchaseButton = document.getElementById("살인자들의섬-구매");
+// 초기 상태 설정
+let iskillHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let iskillBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+killheart.addEventListener("click", function () {
+  iskillHeartFilled = !iskillHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (iskillHeartFilled) {
+    killheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    killpurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    killheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    killpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+killbookmark.addEventListener("click", function () {
+  iskillBookmarkFilled = !iskillBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (iskillBookmarkFilled) {
+    killbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    killbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2979,5 +3166,35 @@ humanBookmarkButton.addEventListener("click", function () {
     humanBookmarkImage.style.display = "none"; // 보이기
   } else {
     humanBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 도시 북마크관련
+const dosiBookmarkButton = document.getElementById("두도-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const dosiBookmarkImage = document.getElementById("두도시이야기bookmark");
+
+// 클릭 이벤트 추가
+dosiBookmarkButton.addEventListener("click", function () {
+  if (dosiBookmarkImage.style.display === "block") {
+    dosiBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    dosiBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 살인 북마크관련
+const killBookmarkButton = document.getElementById("살인-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const killBookmarkImage = document.getElementById("살인자들의섬bookmark");
+
+// 클릭 이벤트 추가
+killBookmarkButton.addEventListener("click", function () {
+  if (killBookmarkImage.style.display === "block") {
+    killBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    killBookmarkImage.style.display = "block"; // 숨기기
   }
 });

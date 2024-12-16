@@ -1218,3 +1218,12 @@ body {
   top: 23vh;
   left: 57vw;
 }
+#end {
+  position: absolute;
+  color: #ffffff;
+  font-size: 5vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 550vh;
+  padding: 3.8vh;
+}

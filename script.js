@@ -1827,6 +1827,66 @@ overlay.addEventListener("click", () => {
     closeKillModal();
   }
 });
+
+// "노르웨이" 모달 관련 변수
+const noruModal = document.getElementById("노르웨이의숲");
+const noruOpenButton = document.getElementById("노르웨이의숲openModal");
+
+// 노르웨이 모달관련
+function openNoruModal() {
+  overlay.style.display = "block";
+  noruModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    noruModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeNoruModal() {
+  gsap.to(noruModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      noruModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+noruOpenButton.addEventListener("click", openNoruModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeNoruModal();
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2785,6 +2845,39 @@ killbookmark.addEventListener("click", function () {
     killbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
+// 노르웨이!!!!하트와 책갈피 관련 변수
+const noruheart = document.getElementById("노루-빈하트");
+const norubookmark = document.getElementById("노루-빈책갈피");
+const norupurchaseButton = document.getElementById("노르웨이의숲-구매");
+// 초기 상태 설정
+let isnoruHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let isnoruBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+noruheart.addEventListener("click", function () {
+  isnoruHeartFilled = !isnoruHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (isnoruHeartFilled) {
+    noruheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    norupurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    noruheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    norupurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+norubookmark.addEventListener("click", function () {
+  isnoruBookmarkFilled = !isnoruBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (isnoruBookmarkFilled) {
+    norubookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    norubookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -3196,5 +3289,20 @@ killBookmarkButton.addEventListener("click", function () {
     killBookmarkImage.style.display = "none"; // 보이기
   } else {
     killBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 노루 북마크관련
+const noruBookmarkButton = document.getElementById("노루-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const noruBookmarkImage = document.getElementById("노르웨이의숲bookmark");
+
+// 클릭 이벤트 추가
+noruBookmarkButton.addEventListener("click", function () {
+  if (noruBookmarkImage.style.display === "block") {
+    noruBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    noruBookmarkImage.style.display = "block"; // 숨기기
   }
 });

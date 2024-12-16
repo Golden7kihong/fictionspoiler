@@ -1409,6 +1409,66 @@ overlay.addEventListener("click", () => {
     closeChernobylModal();
   }
 });
+
+// "채식" 모달 관련 변수
+const chaeModal = document.getElementById("채식주의자");
+const chaeOpenButton = document.getElementById("채식주의자openModal");
+
+// 눈먼자들의도시 모달관련
+function openChaeModal() {
+  overlay.style.display = "block";
+  chaeModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    chaeModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeChaeModal() {
+  gsap.to(chaeModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      chaeModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+chaeOpenButton.addEventListener("click", openChaeModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeChaeModal();
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2130,6 +2190,40 @@ chernobylbookmark.addEventListener("click", function () {
     chernobylbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
+
+// 채식주의자!!!!하트와 책갈피 관련 변수
+const chaeheart = document.getElementById("채식-빈하트");
+const chaebookmark = document.getElementById("채식-빈책갈피");
+const chaepurchaseButton = document.getElementById("채식주의자-구매");
+// 초기 상태 설정
+let ischaeHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let ischaeBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+chaeheart.addEventListener("click", function () {
+  ischaeHeartFilled = !ischaeHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (ischaeHeartFilled) {
+    chaeheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    chaepurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    chaeheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    chaepurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+chaebookmark.addEventListener("click", function () {
+  ischaeBookmarkFilled = !ischaeBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (ischaeBookmarkFilled) {
+    chaebookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    chaebookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2436,5 +2530,20 @@ chernobylBookmarkButton.addEventListener("click", function () {
     chernobylBookmarkImage.style.display = "none"; // 보이기
   } else {
     chernobylBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 채식주의자 북마크관련
+const chaeBookmarkButton = document.getElementById("채식-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const chaeBookmarkImage = document.getElementById("채식주의자bookmark");
+
+// 클릭 이벤트 추가
+chaeBookmarkButton.addEventListener("click", function () {
+  if (chaeBookmarkImage.style.display === "block") {
+    chaeBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    chaeBookmarkImage.style.display = "block"; // 숨기기
   }
 });

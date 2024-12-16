@@ -128,14 +128,15 @@ body {
 }
 #모달제목 {
   position: absolute;
-  font-weight: 500;
-  font-size: 9vw;
-  top: -2.2vh;
+  font-weight: 600;
+  font-size: 7vw;
+  /* top: -2.2vh; */
   left: 6vw;
 }
 #모달부제목 {
   position: absolute;
-  font-weight: 400;
+  color: #3a3a3a;
+  font-weight: 500;
   font-size: 4.5vw;
   top: 7.5vh;
   left: 6vw;

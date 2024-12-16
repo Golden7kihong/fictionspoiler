@@ -164,10 +164,10 @@ body {
 #나니아연대기bookmark, #자살클럽bookmark, #총균쇠bookmark, #레미제라블bookmark, #변신bookmark, 
 #멋진신세계bookmark, #일구팔사bookmark, #비밀의화원bookmark, #죽은자의집청소bookmark, #이처럼사소한것들bookmark, 
 #내가사랑했던모든남자들에게bookmark, #죄와벌bookmark, #데미안bookmark, #위대한개츠비bookmark, #앵무새죽이기bookmark, 
-#나는전설이다bookmark {
+#나는전설이다bookmark, #체르노빌의목소리bookmark {
   display: none;
   position: relative;
-  width: 72.5vw;
+  width: 72vw;
   margin-top: 2vh;
   margin-left: 5.7vw;
 }
@@ -297,6 +297,12 @@ body {
   left: 50vw;
   top: 328.8vh;
 }
+#체르노빌의목소리openModal {     /*2열*/
+  position: absolute;
+  width: 14vw;
+  left: 22vw;
+  top: 350.6vh;
+}
 #overlay {
   display: none; /* 기본적으로 숨김 */
   position: fixed;
@@ -321,7 +327,7 @@ body {
 
 #눈먼자들의도시, #핑거스미스, #오만과편견, #어린왕자, #나니아연대기, #자살클럽, #총균쇠, #레미제라블, 
 #변신, #멋진신세계, #일구팔사, #비밀의화원, #죽은자의집청소, #이처럼사소한것들, #내가사랑했던모든남자들에게, 
-#죄와벌, #데미안, #위대한개츠비, #앵무새죽이기, #나는전설이다 {
+#죄와벌, #데미안, #위대한개츠비, #앵무새죽이기, #나는전설이다, #체르노빌의목소리 {
   display: none;
   position: fixed;
   z-index: 20;
@@ -475,6 +481,18 @@ body {
   font-size: 6vw;
   font-weight: 500;
 }
+#체르노빌의목소리-제목 {
+  position: fixed;
+  top: 0.5vh;
+  left: 41vw;
+  font-size: 6vw;
+  font-weight: 500;
+}
+/* 넘어가기 방지턱 넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱 
+  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱 
+  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱 
+  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱  넘어가기 방지턱 */
+  
 #눈먼자들의도시-저자 {
   position: fixed;
   top: 7vh;
@@ -635,9 +653,17 @@ body {
   font-weight: 400;
   line-height: 2.7vh;
 }
+#체르노빌의목소리-저자 {
+  position: fixed;
+  top: 7vh;
+  left: 41vw;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 2.7vh;
+}
 #책표지1, #책표지2, #책표지3, #책표지4, #책표지5, #책표지6, #책표지7, #책표지8, #책표지9, #책표지10, 
 #책표지11, #책표지12, #책표지13, #책표지14, #책표지15, #책표지16, #책표지17, #책표지18, #책표지19, 
-#책표지20, #책표지21 {
+#책표지20, #책표지21, #책표지22 {
   position: fixed;
   height: 25vh;
   top: 4vh;
@@ -645,7 +671,7 @@ body {
 #눈먼자들의도시-본문, #핑거스미스-본문, #오만과편견-본문, #어린왕자-본문, #나니아연대기-본문,#자살클럽-본문,
 #총균쇠-본문,#레미제라블-본문, #변신-본문, #멋진신세계-본문, #일구팔사-본문, #비밀의화원-본문, #죽은자의집청소-본문,
 #이처럼사소한것들-본문,#내가사랑했던모든남자들에게-본문, #죄와벌-본문, #데미안-본문, #위대한개츠비-본문, 
-#앵무새죽이기-본문, #나는전설이다-본문 {
+#앵무새죽이기-본문, #나는전설이다-본문, #체르노빌의목소리-본문 {
   position: fixed;
   margin-right: 5.4vw;
   top: 30vh;
@@ -655,7 +681,7 @@ body {
 #눈먼자들의도시-구매, #핑거스미스-구매, #오만과편견-구매, #어린왕자-구매, #나니아연대기-구매, #자살클럽-구매,
 #총균쇠-구매, #레미제라블-구매, #변신-구매, #멋진신세계-구매, #일구팔사-구매, #비밀의화원-구매, #죽은자의집청소-구매,
 #이처럼사소한것들-구매, #내가사랑했던모든남자들에게-구매, #죄와벌-구매, #데미안-구매, #위대한개츠비-구매, #앵무새죽이기-구매, 
-#나는전설이다-구매 {
+#나는전설이다-구매, #체르노빌의목소리-구매 {
   display: none;
   position: fixed;
   width: 65vw;
@@ -666,7 +692,7 @@ body {
 #눈먼자들의도시-content, #핑거스미스-content, #오만과편견-content, #어린왕자-content, #나니아연대기-content, 
 #자살클럽-content, #총균쇠-content, #레미제라블-content, #변신-content, #멋진신세계-content, 
 #일구팔사-content, #비밀의화원-content, #죽은자의집청소-content, #이처럼사소한것들-content, #내가사랑했던모든남자들에게-content, 
-#죄와벌-content, #데미안-content, #위대한개츠비-content, #앵무새죽이기-content, #나는전설이다-content {
+#죄와벌-content, #데미안-content, #위대한개츠비-content, #앵무새죽이기-content, #나는전설이다-content, #체르노빌의목소리-content {
   padding: 20px;
 }
 
@@ -785,6 +811,12 @@ body {
   left: 41vw;
 }
 #전설-빈하트 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 41vw;
+}
+#체르노빌-빈하트 {
   position: fixed;
   width: 11vw;
   top: 23vh;
@@ -909,6 +941,12 @@ body {
   left: 56vw;
 }
 #전설-빈책갈피 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 56vw;
+}
+#체르노빌-빈책갈피 {
   position: fixed;
   width: 11vw;
   top: 23vh;

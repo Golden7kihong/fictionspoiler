@@ -1350,6 +1350,65 @@ overlay.addEventListener("click", () => {
   }
 });
 
+// "체르노빌" 모달 관련 변수
+const chernobylModal = document.getElementById("체르노빌의목소리");
+const chernobylOpenButton = document.getElementById("체르노빌의목소리openModal");
+
+// 체르노빌 모달관련
+function openChernobylModal() {
+  overlay.style.display = "block";
+  chernobylModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    chernobylModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeChernobylModal() {
+  gsap.to(chernobylModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      chernobylModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+chernobylOpenButton.addEventListener("click", openChernobylModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeChernobylModal();
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -1357,7 +1416,7 @@ overlay.addEventListener("click", () => {
 
 
 
-// 이처럼사소한것들!!!!하트와 책갈피 관련 변수
+// 위대한개츠비!!!!하트와 책갈피 관련 변수
 const gatsbyheart = document.getElementById("개츠비-빈하트");
 const gatsbybookmark = document.getElementById("개츠비-빈책갈피");
 const gatsbypurchaseButton = document.getElementById("위대한개츠비-구매");
@@ -2038,6 +2097,39 @@ legendbookmark.addEventListener("click", function () {
   }
 });
 
+// 체르노빌!!!!하트와 책갈피 관련 변수
+const chernobylheart = document.getElementById("체르노빌-빈하트");
+const chernobylbookmark = document.getElementById("체르노빌-빈책갈피");
+const chernobylpurchaseButton = document.getElementById("체르노빌의목소리-구매");
+// 초기 상태 설정
+let ischernobylHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let ischernobylBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+chernobylheart.addEventListener("click", function () {
+  ischernobylHeartFilled = !ischernobylHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (ischernobylHeartFilled) {
+    chernobylheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    chernobylpurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    chernobylheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    chernobylpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+chernobylbookmark.addEventListener("click", function () {
+  ischernobylBookmarkFilled = !ischernobylBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (ischernobylBookmarkFilled) {
+    chernobylbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    chernobylbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
 // 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
@@ -2329,5 +2421,20 @@ legendBookmarkButton.addEventListener("click", function () {
     legendBookmarkImage.style.display = "none"; // 보이기
   } else {
     legendBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 체르노빌 북마크관련
+const chernobylBookmarkButton = document.getElementById("체르노빌-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const chernobylBookmarkImage = document.getElementById("체르노빌의목소리bookmark");
+
+// 클릭 이벤트 추가
+chernobylBookmarkButton.addEventListener("click", function () {
+  if (chernobylBookmarkImage.style.display === "block") {
+    chernobylBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    chernobylBookmarkImage.style.display = "block"; // 숨기기
   }
 });

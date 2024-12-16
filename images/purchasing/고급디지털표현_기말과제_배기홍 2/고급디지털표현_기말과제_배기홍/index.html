@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>소설 헤살꾼!!!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/Draggable.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <video id="loading" class="loading" src="images/videos/real_loading.mp4" muted autoplay loop playsinline></video>
+    <video id="background" src="images/videos/background.mp4" muted autoplay loop playsinline></video>
+    <img id="head-line1" src="images/headerline.png" alt="마진라인">
+    <img id="head-line2" src="images/headerline.png" alt="마진라인">
+    <img id="head-line3" src="images/headerline.png" alt="마진라인">
+    <img id="under-line1" src="images/headerline.png" alt="마진라인">
+    <a href="https://www.kyobobook.co.kr/" target="_blank">
+      <img id="교보문고" src="images/kyobo.png" alt="협찬사1">
+    </a>
+    <a href="https://www.millie.co.kr/v3/brand/update#intro" target="_blank">
+      <img id="밀리의서재" src="images/millie.png" alt="협찬사2">
+    </a>
+    <p id="Main-title">소설<br>헤살꾼</p>
+    <p id="Sub-title">당신이 책을 읽게 되는<br>작은 이유가 되었으면 합니다...</p>
+    <div id="주석스껄라이크우진돗개">*헤살꾼: 남의 일에 짓궂게 훼방을 놓는 사람</div>
+    <div id="이용설명">구문을 터치하여 결말 보기</div>
+    <img id="이용설명화살표" src="images/under_arrow.png">
+    <img id="float-button" src="images/float_button.png">
+
+    <div id="myModal" class="float-modal">
+      <div class="float-modal-content">
+          <p id="모달제목">소설 책갈피</p>
+          <p id="모달부제목">즐겨찾기한 책들을 모아봤어요.</p>
+          <div id="marginbox"></div>
+          <a href="https://product.kyobobook.co.kr/detail/S000001136422" target="_blank"><img id="눈먼자들의도시bookmark" src="images/book_cover/bookmark_tap/blindness_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000581847" target="_blank"><img id="핑거스미스bookmark" src="images/book_cover/bookmark_tap/fingersmith_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000620225" target="_blank"><img id="오만과편견bookmark" src="images/book_cover/bookmark_tap/prideandprejudice_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000001942582" target="_blank"><img id="어린왕자bookmark" src="images/book_cover/bookmark_tap/TheLittlePrince_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000735107" target="_blank"><img id="나니아연대기bookmark" src="images/book_cover/bookmark_tap/TheChroniclesofNarnia_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000581563" target="_blank"><img id="자살클럽bookmark" src="images/book_cover/bookmark_tap/TheSuicideClub_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000201932024" target="_blank"><img id="총균쇠bookmark" src="images/book_cover/bookmark_tap/GunsGermsSteel_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000699889" target="_blank"><img id="레미제라블bookmark" src="images/book_cover/bookmark_tap/Lesmiserables_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000620141" target="_blank"><img id="변신bookmark" src="images/book_cover/bookmark_tap/TheMetamorphosis_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000001144035" target="_blank"><img id="멋진신세계bookmark" src="images/book_cover/bookmark_tap/BraveNewWorld_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000620214" target="_blank"><img id="일구팔사bookmark" src="images/book_cover/bookmark_tap/1984_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000201358680" target="_blank"><img id="비밀의화원bookmark" src="images/book_cover/bookmark_tap/TheSecretGarden_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000598167" target="_blank"><img id="죽은자의집청소bookmark" src="images/book_cover/bookmark_tap/Cleaning_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000211513068" target="_blank"><img id="이처럼사소한것들bookmark" src="images/book_cover/bookmark_tap/SmallThingslikeThese_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000001788141" target="_blank"><img id="내가사랑했던모든남자들에게bookmark" src="images/book_cover/bookmark_tap/ToAlltheBoys_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000575672" target="_blank"><img id="죄와벌bookmark" src="images/book_cover/bookmark_tap/CrimeandPunishment_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000620181" target="_blank"><img id="데미안bookmark" src="images/book_cover/bookmark_tap/Demian_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000777565" target="_blank"><img id="위대한개츠비bookmark" src="images/book_cover/bookmark_tap/TheGreatGatsby_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000581821" target="_blank"><img id="앵무새죽이기bookmark" src="images/book_cover/bookmark_tap/ToKillaMockingbird_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000001277779" target="_blank"><img id="나는전설이다bookmark" src="images/book_cover/bookmark_tap/IAmLegend_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000001599378" target="_blank"><img id="체르노빌의목소리bookmark" src="images/book_cover/bookmark_tap/VoicesfromChernobyl_bookmark.png"></a>
+          <a href="https://product.kyobobook.co.kr/detail/S000000610650" target="_blank"><img id="채식주의자bookmark" src="images/book_cover/bookmark_tap/TheVegetarian_bookmark.png"></a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <img id="눈먼자들의도시openModal" src="images/archiving/blindness.png">
+    <div id="overlay"></div>
+    <div class="Modal" id="눈먼자들의도시">
+      <div id="눈먼자들의도시-content">
+        <img src="images/book_cover/blindness_cover.jpg" id="책표지1">
+        <p id="눈먼자들의도시-제목">눈먼 자들의 도시</p>
+        <p id="눈먼자들의도시-저자">주제 사라마고<br>(José Saramago)</p>
+        <img id="도시-빈하트" src="images/heart_empty.png">
+        <img id="도시-빈책갈피" src="images/bookmark_empty.png">
+        <p id="눈먼자들의도시-본문">...(중략)<br>&nbsp;실명된 사람들은 상상할 수 없는 어려움에 처하며, 특히 격리된 ‘임시 거주지’에서는 생존을 위한 치열한 싸움 속에 인간성이 점차 무너져갑니다. 폭력과 절망, 비인간적인 행동이 만연한 가운데, 사람들은 서로를 상처 입히고 신뢰를 잃으며 갈등이 심화됩니다. 그럼에도 일부는 희망을 잃지 않고 서로를 돕고자 노력하며, 비극 속에서도 새로운 관계의 가능성을 모색합니다.<br><br>
+          &nbsp;그러던 중, 원인 모를 집단 실명 사태가 갑자기 끝나면서 사람들은 다시 시력을 되찾습니다. 이들은 단순히 눈을 뜨는 것을 넘어, 고통과 절망 속에서 인간성과 희망의 가치를 되새기며 새로운 삶을 준비합니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000001136422" target="_blank"><img id="눈먼자들의도시-구매" src="images/purchasing/purchase_blindness.png"></a>
+      </div>
+    </div>
+
+    <img id="핑거스미스openModal" src="images/archiving/fingersmith.png">
+    <div id="overlay"></div>
+    <div class="Modal" id="핑거스미스">
+      <div id="핑거스미스-content">
+        <img src="images/book_cover/fingersmith_cover.jpg" id="책표지2">
+        <p id="핑거스미스-제목">핑거스미스</p>
+        <p id="핑거스미스-저자">세라 워터스<br>(Sarah Waters)</p>
+        <img id="핑거-빈하트" src="images/heart_empty.png">
+        <img id="핑거-빈책갈피" src="images/bookmark_empty.png">
+        <p id="핑거스미스-본문">...(중략)<br>&nbsp;수는 고아원에서 자라며 세상의 잔인함을 배웠고, 어느 날 사기꾼 핸리 마틴의 손에 넘어갑니다. 그의 계획은 상류층 여성 레이디 드루몬드를 속여 결혼 후 재산을 차지하는 것. 수는 계획대로 레이디 드루몬드의 하녀로 들어가 그녀를 유혹하며 약점을 파고들기 시작합니다. 그러나 예상치 못하게 수는 레이디 드루몬드를 사랑하게 되고, 그녀 역시 수에게 마음을 엽니다.<br><br>
+          &nbsp;그 과정에서 모든 것이 거짓임을 깨닫게 된 수는 핸리의 음모와 속임수, 그리고 레이디 드루몬드가 자신과 같은 처지였다는 충격적 진실을 알게 됩니다. 결국 두 여자는 핸리의 계획을 저지하며, 사랑과 진실을 바탕으로 새로운 삶을 시작합니다. 복수와 배신, 그리고 구속과 사랑이 얽힌 이 이야기는 반전으로 독자를 사로잡습니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000581847" target="_blank"><img id="핑거스미스-구매" src="images/purchasing/purchase_fingersmith.png"></a>
+      </div>
+    </div>
+    <img id="오만과편견openModal" src="images/archiving/prideandprejudice.png">
+    <div id="overlay"></div>
+    <div class="Modal" id="오만과편견">
+      <div id="오만과편견-content">
+        <img src="images/book_cover/prideandprejudice_cover.jpg" id="책표지3">
+        <p id="오만과편견-제목">오만과 편견</p>
+        <p id="오만과편견-저자">제인 오스틴<br>(Jane Austen)</p>
+        <img id="오만-빈하트" src="images/heart_empty.png">
+        <img id="오만-빈책갈피" src="images/bookmark_empty.png">
+        <p id="오만과편견-본문">...(중략)<br>엘리자베스는 경제적으로 넉넉하지는 않지만 따뜻하고 유쾌한 가정에서 자란 반면, 미스터 다아시는 부유하고 고귀한 가문 출신으로 자신의 사회적 지위에 큰 자부심을 가지고 있습니다. 이로 인해 두 사람은 처음 만났을 때 오해와 편견을 품게 됩니다. 엘리자베스는 다아시의 교만함에 불쾌감을 느끼고, 다아시는 그녀를 가볍게 여기며 오만한 판단을 내립니다.<br><br>
+          &nbsp;그러나 여러 사건을 통해 서로의 진심을 알게 된 두 사람은 오해를 풀고, 다아시는 엘리자베스의 지혜와 강한 의지에 매력을 느끼며, 엘리자베스는 그의 성숙한 변화를 받아들입니다. 결국 둘은 오만과 편견을 극복하고 결혼하며, 제인과 빙리도 함께 행복한 결혼을 맞이합니다. 소설은 사랑과 성장의 메시지로 마무리됩니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000620225" target="_blank"><img id="오만과편견-구매" src="images/purchasing/purchase_prideandprejudice.png"></a>
+      </div>
+    </div>
+
+    <img id="어린왕자openModal" src="images/archiving/TheLittlePrince.png">
+    <div id="overlay"></div>
+    <div class="Modal" id="어린왕자">
+      <div id="어린왕자-content">
+        <img src="images/book_cover/TheLittlePrince_cover.jpg" id="책표지4">
+        <p id="어린왕자-제목">어린왕자</p>
+        <p id="어린왕자-저자">앙투안 드 생택쥐페리<br>(Antoine de Saint-Exupéry)</p>
+        <img id="왕자-빈하트" src="images/heart_empty.png">
+        <img id="왕자-빈책갈피" src="images/bookmark_empty.png">
+        <p id="어린왕자-본문">...(중략)<br>&nbsp;어린 왕자는 자신의 별을 떠나 여러 별을 여행한 후, 지구에 도착합니다. 지구에서 그는 비행사와 만나고, 여행 중에 만난 여러 사람들(왕, 허영심 많은 사람, 술 취한 사람, 사업가 등)에 대해 이야기합니다. 이들과의 만남을 통해 어린 왕자는 어른들의 세상이 얼마나 허망한지를 깨닫게 됩니다.<br><br>
+          &nbsp;지구에서 그는 여우를 만나 "중요한 것은 눈에 보이지 않는다"라는 중요한 교훈을 얻습니다. 결국 어린 왕자는 자신의 별로 돌아가기로 결심하게 됩니다. 그는 뱀에게 물려 사라지게 되고, 비행사는 그가 다시 돌아오기를 간절히 바랍니다. 비록 어린 왕자는 사라지지만, 그의 사랑과 깨달음은 지구에 남아 그를 기억하는 사람들에게 계속해서 영향을 미치게 됩니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000001942582" target="_blank"><img id="어린왕자-구매" src="images/purchasing/purchase_TheLittlePrince.png"></a>
+      </div>
+    </div>
+
+    <img id="채식주의자openModal" src="images/archiving/TheVegetarian.png">
+    <div class="Modal" id="채식주의자">
+      <div id="채식주의자-content">
+        <img src="images/book_cover/TheVegetarian_cover.jpg" id="책표지5">
+        <p id="채식주의자-제목">채식주의자</p>
+        <p id="채식주의자-저자">한강 (Han Kang)</p>
+        <img id="채식-빈하트" src="images/heart_empty.png">
+        <img id="채식-빈책갈피" src="images/bookmark_empty.png">
+        <p id="채식주의자-본문">...(중략)<br>&nbsp;주인공 영혜는 평범한 가정주부였으나, 어느 날 갑자기 고기를 거부하고 채식주의자로 살아가겠다고 결심합니다. 이 변화는 그녀의 가족과 주변 사람들에게 큰 충격을 주고, 영혜는 점차 자신의 신념을 고수하게 됩니다.<br><br>
+          &nbsp;영혜의 남편과 가족은 그녀의 행동을 이해하지 못하고 갈등이 심화되며, 영혜는 점점 고립됩니다. 그녀의 정신 상태도 악화되어 결국 정신병원에 입원하게 되고, 그곳에서의 경험은 그녀의 삶을 더욱 비극적으로 만듭니다. 마지막에는 영혜가 자신의 정체성과 신념을 지키기 위해 극단적인 선택을 하게 되면서, 가족과의 관계는 완전히 단절되고, 그녀의 삶은 비극적인 결말을 맞이합니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000610650" target="_blank"><img id="채식주의자-구매" src="images/purchasing/purchase_TheVegetarian.png"></a>
+      </div>
+    </div>
+
+    <img id="나니아연대기openModal" src="images/archiving/TheChroniclesofNarnia.png">
+    <div id="overlay"></div>
+    <div class="Modal" id="나니아연대기">
+      <div id="나니아연대기-content">
+        <img src="images/book_cover/TheChroniclesofNarnia_cover.jpg" id="책표지6">
+        <p id="나니아연대기-제목">나니아 연대기</p>
+        <p id="나니아연대기-저자">루이스<br>(C. S. Lewis)</p>
+        <img id="나니아-빈하트" src="images/heart_empty.png">
+        <img id="나니아-빈책갈피" src="images/bookmark_empty.png">
+        <p id="나니아연대기-본문">...(중략)<br>&nbsp;나니아 연대기는 네 명의 형제자매가 나니아라는 마법의 세계에 들어가 아슬란이라는 사자와 함께 여러 모험을 펼치는 이야기입니다. 이들은 나니아를 구하고 성장하며, 선과 악의 대립을 극복해 나갑니다. 아슬란은 나니아의 진정한 왕이자 구세주로 등장해, 나니아 세계의 위기를 해결하고 이들을 이끕니다.<br><br>
+          &nbsp;시리즈의 마지막 책 [마지막 전투]에서는 나니아 세계가 붕괴되고, 아슬란은 나니아의 끝을 맞이하게 합니다. 하지만 주인공들과 나니아의 친구들은 아슬란의 인도 아래 진정한 나니아, 즉 영원한 평화의 세계로 들어가 영원히 행복하게 살게 됩니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000735107" target="_blank"><img id="나니아연대기-구매" src="images/purchasing/purchase_TheChroniclesofNarnia.png"></a>
+      </div>
+    </div>
+
+    <img id="자살클럽openModal" src="images/archiving/TheSuicideClub.png">
+    <div class="Modal" id="자살클럽">
+      <div id="자살클럽-content">
+        <img src="images/book_cover/TheSuicideClub_cover.jpg" id="책표지7">
+        <p id="자살클럽-제목">자살 클럽</p>
+        <p id="자살클럽-저자">로버트 루이스 스티븐슨<br>(Robert Louis Stevenson)</p>
+        <img id="자살-빈하트" src="images/heart_empty.png">
+        <img id="자살-빈책갈피" src="images/bookmark_empty.png">
+        <p id="자살클럽-본문">...(중략)<br>&nbsp;주인공은 자살을 결심한 사람들이 모인 클럽에 가입합니다. 그곳에서 회원들과 서로의 죽음을 돕기로 하지만, 점차 클럽의 이상한 분위기와 정체성에 의문을 품게 됩니다. 결국 그는 클럽의 '리더'로부터 회원들이 모두 이미 죽은 사람들이며, 끊임없이 자살을 반복하고 있다는 충격적인 사실을 알게 됩니다.<br><br>
+          &nbsp;결말에서 주인공은 자신이 살아 있는지, 이미 죽었는지조차 알 수 없게 되며, 클럽이 단순한 자살 모임이 아니라 죽음을 초월하려는 무의미한 반복 속에 갇힌 공간임을 깨닫습니다. 그는 존재와 죽음에 대한 근본적 질문을 마주하지만, 답을 찾지 못한 채 이야기는 열린 결말로 끝납니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000581563" target="_blank"><img id="자살클럽-구매" src="images/purchasing/purchase_TheSuicideClub.png"></a>
+      </div>
+    </div>
+
+    <img id="총균쇠openModal" src="images/archiving/GunsGermsSteel.png">
+    <div class="Modal" id="총균쇠">
+      <div id="총균쇠-content">
+        <img src="images/book_cover/GunsGermsSteel_cover.jpg" id="책표지8">
+        <p id="총균쇠-제목">총 균 쇠</p>
+        <p id="총균쇠-저자">재레드 다이아몬드<br>(Jared Diamond)</p>
+        <img id="총-빈하트" src="images/heart_empty.png">
+        <img id="총-빈책갈피" src="images/bookmark_empty.png">
+        <p id="총균쇠-본문">...(중략)<br>&nbsp;재레드 다이아몬드는 이 책을 통해 문명의 발전이 결코 인종이나 유전자에 의해 결정된 것이 아니라, 환경적 요소와 지리적 조건이 큰 영향을 미쳤다고 주장합니다. 인류의 역사에서 발생한 불평등과 권력의 차이는 결국 자연 환경에 의한 선택적 결과였음을 강조하면서, 문명 간의 격차가 우연이 아닌 필연적인 역사적 흐름이었다고 설명합니다.<br><br>
+          &nbsp;마지막으로 다이아몬드는 우리가 현재 직면한 불평등의 문제를 해결하기 위해서는 환경적, 사회적 구조를 이해하고, 우리가 가진 자원과 조건을 어떻게 활용할 것인지에 대한 성찰이 필요하다고 말합니다. 그는 문명의 발전이 특정 대륙에 집중된 이유를 설명하며, 앞으로의 인류는 더 나은 미래를 위해 상호 연결된 세계 속에서 환경적 한계를 넘어서는 방향으로 나아가야 한다는 메시지를 남깁니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000201932024" target="_blank"><img id="총균쇠-구매" src="images/purchasing/purchase_GunsGermsSteel.png"></a>
+      </div>
+    </div>
+
+    <img id="레미제라블openModal" src="images/archiving/Lesmiserables.png">
+    <div class="Modal" id="레미제라블">
+      <div id="레미제라블-content">
+        <img src="images/book_cover/Lesmiserables_cover.jpg" id="책표지9">
+        <p id="레미제라블-제목">레 미제라블</p>
+        <p id="레미제라블-저자">빅토르 위고<br>(Victor Hugo)</p>
+        <img id="레미-빈하트" src="images/heart_empty.png">
+        <img id="레미-빈책갈피" src="images/bookmark_empty.png">
+        <p id="레미제라블-본문">...(중략)<br>&nbsp;장 발장은 빵 하나 때문에 감옥에서 19년을 보냈고, 세상은 그를 영원한 죄인으로 내버렸습니다. 한순간의 실수로 모든 것을 잃고, 그저 버림받은 존재가 된 그는 어느 날, 주교의 자비로 기회를 얻고, 절망의 끝에서 새로운 삶을 시작합니다. 하지만 그의 과거는 쉽게 사라지지 않으며, 자베르라는 경찰은 그를 끝까지 추격합니다. 자베르는 정의를 추구하며, 장 발장의 죄를 끊임없이 파헤칩니다.<br><br>
+          &nbsp;장 발장은 자신을 숨기고, 타인을 구하기 위해 스스로를 희생하며 살아갑니다. 그는 사랑을 위해, 딸을 구하기 위해 싸우고, 마지막 순간 모든 것을 내던지며 구속의 길을 열고, 죽음을 맞이합니다. 그가 떠난 뒤, 사람들은 그의 희생과 용서, 그리고 진정한 인간애를 되새기며 그를 기억하게 됩니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000699889" target="_blank"><img id="레미제라블-구매" src="images/purchasing/purchase_Lesmiserables.png"></a>
+      </div>
+    </div>
+
+    <img id="변신openModal" src="images/archiving/TheMetamorphosis.png">
+    <div class="Modal" id="변신">
+      <div id="변신-content">
+        <img src="images/book_cover/TheMetamorphosis_cover.jpg" id="책표지10">
+        <p id="변신-제목">변신</p>
+        <p id="변신-저자">프란츠 카프카<br>(Franz Kafka)</p>
+        <img id="변-빈하트" src="images/heart_empty.png">
+        <img id="변-빈책갈피" src="images/bookmark_empty.png">
+        <p id="변신-본문">...(중략)<br>&nbsp;프란츠 카프카의 [변신]에서 주인공 그레고르 잠자는 어느 날 아침, 자신이 거대한 벌레로 변한 것을 발견합니다. 처음엔 혼란스러워하며 받아들이지 못하지만, 점차 변화를 감당하려 애씁니다. 그러나 가족은 그를 괴물로 취급하며 외면하고, 그는 점점 고립되고 상처받습니다. 결국 가족은 그를 방에 가두고 존재를 부정하기에 이릅니다.<br><br>
+          &nbsp;결국, 그레고르는 점점 쇠약해지고, 가족의 무관심과 냉대 속에서 인간성을 점차 잃어가며 생을 마감합니다. 그의 죽음 이후, 가족은 오히려 안도하며 새로운 삶에 대한 희망을 품습니다. 이 결말은 그레고르가 가족에게 미친 영향과 인간 존재의 고독을 비극적으로 그려내며, 동시에 현대인의 소외와 불안, 존재의 부조리를 상징적으로 드러냅니다. 그의 죽음은 단순한 생의 끝이 아니라, 인간성과 관계의 파괴를 암시하며, 억눌린 감정과 고통이 결국 그를 삼켰음을 보여줍니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000620141" target="_blank"><img id="변신-구매" src="images/purchasing/purchase_TheMetamorphosis.png"></a>
+      </div>
+    </div>
+    <img id="멋진신세계openModal" src="images/archiving/BraveNewWorld.png">
+    <div class="Modal" id="멋진신세계">
+      <div id="멋진신세계-content">
+        <img src="images/book_cover/BraveNewWorld_cover.jpg" id="책표지12">
+        <p id="멋진신세계-제목">멋진 신세계</p>
+        <p id="멋진신세계-저자">올더스 헉슬리<br>(Aldous Huxley)</p>
+        <img id="신세계-빈하트" src="images/heart_empty.png">
+        <img id="신세계-빈책갈피" src="images/bookmark_empty.png">
+        <p id="멋진신세계-본문">...(중략)<br>&nbsp;존은 '야만인'이라 불리며 사회에 적응하지 못하고 갈등을 겪습니다. 그는 자연스럽고 자유로운 삶을 꿈꾸지만, '멋진 신세계'에서는 이를 불온하고 위험한 욕망으로 간주합니다. 결국 그는 사회의 규범에 반발하며 고립된 삶을 선택하지만, 끝내 억압적인 가치에 굴복하고 자살이라는 비극적 결말을 맞이합니다.<br><br>
+          &nbsp;헉슬리는 소설의 결말에서 인간 존재의 의미와 자유, 그리고 고독을 묘사합니다. '멋진 신세계'의 완벽한 사회는 고통과 감정을 제거했지만, 진정한 인간성과 개개인의 자아를 억압합니다. 이는 완전한 행복을 추구하려면 일정 수준의 고통과 갈등이 불가피하다는 메시지를 전합니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000001144035" target="_blank"><img id="멋진신세계-구매" src="images/purchasing/purchase_BraveNewWorld.png"></a>
+      </div>
+    </div>
+    <img id="일구팔사openModal" src="images/archiving/onenine.png">
+    <div class="Modal" id="일구팔사">
+      <div id="일구팔사-content">
+        <img src="images/book_cover/onenine_cover.jpg" id="책표지11">
+        <p id="일구팔사-제목">1984</p>
+        <p id="일구팔사-저자">조지 오웰<br>(George Orwell)</p>
+        <img id="일구팔사-빈하트" src="images/heart_empty.png">
+        <img id="일구팔사-빈책갈피" src="images/bookmark_empty.png">
+        <p id="일구팔사-본문">...(중략)<br>&nbsp;윈스턴은 당의 철저한 감시와 통제 속에서 자신의 생각과 반항을 숨기며 살아가지만, 결국 오브라이언에게 끌려갑니다. 오브라이언은 혁명의 희망을 심어주었지만, 사실 당의 충실한 일원으로, 고문과 세뇌를 통해 윈스턴의 사상과 신념을 철저히 무너뜨리려 합니다. 윈스턴은 결국 개인적인 자유와 진실을 포기하며, 자신이 증오하던 '빅 브라더'를 사랑하게 됩니다.<br><br>
+          &nbsp;소설의 마지막에서, 윈스턴은 줄리아를 배신하고 완전히 복종합니다. 그는 더 이상 자유로운 사고를 할 수 없으며, '빅 브라더'를 진심으로 사랑하게 됩니다. 오웰은 이 결말을 통해 권력이 인간 정신까지 잠식해 자유를 박탈할 수 있음을 냉혹하게 경고합니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000000620214" target="_blank"><img id="일구팔사-구매" src="images/purchasing/purchase_1984.png"></a>
+      </div>
+    </div>
+    <img id="비밀의화원openModal" src="images/archiving/TheSecretGarden.png">
+    <div class="Modal" id="비밀의화원">
+      <div id="비밀의화원-content">
+        <img src="images/book_cover/TheSecretGarden_cover.jpg" id="책표지13">
+        <p id="비밀의화원-제목">비밀의 화원</p>
+        <p id="비밀의화원-저자">프랜시스 호지슨 버넷<br>(Frances Hodgson Burnett)</p>
+        <img id="화원-빈하트" src="images/heart_empty.png">
+        <img id="화원-빈책갈피" src="images/bookmark_empty.png">
+        <p id="비밀의화원-본문">...(중략)<br>&nbsp;주인공 메리 레녹스는 부모를 잃고 외딴 영국 집에서 살게 되며, 차갑고 고립된 성격의 아이였습니다. 그곳에서 우연히 비밀의 화원을 발견한 메리는 방치된 정원을 되살리기로 결심하며, 친구 콜린과 디콘과 함께 정원을 가꾸기 시작합니다. 이 과정에서 메리는 점차 마음을 열고, 그들과 함께 서로의 상처를 치유하며 변화합니다.<br><br>
+          &nbsp;결국 정원은 다시 꽃을 피우고, 메리와 콜린, 디콘 역시 아픔과 고립에서 벗어나 성장합니다. 콜린은 병약함을 극복하고, 메리는 삶에 대한 희망과 사랑을 되찾습니다. 이 책은 자연과 사랑, 희망이 이끄는 치유와 성장을 따뜻하게 그려낸 이야기로 마무리됩니다.</p>
+        <a href="https://product.kyobobook.co.kr/detail/S000201358680" target="_blank"><img id="비밀의화원-구매" src="images/purchasing/purchase_TheSecretGarden.png"></a>
+      </div>
+    </div>
+  </main>
+  <img id="죽은자의집청소openModal" src="images/archiving/Cleaning.png">
+  <div class="Modal" id="죽은자의집청소">
+    <div id="죽은자의집청소-content">
+      <img src="images/book_cover/Cleaning_cover.jpg" id="책표지14">
+      <p id="죽은자의집청소-제목">죽은 자의 집 청소</p>
+      <p id="죽은자의집청소-저자">김완</p>
+      <img id="청소-빈하트" src="images/heart_empty.png">
+      <img id="청소-빈책갈피" src="images/bookmark_empty.png">
+      <p id="죽은자의집청소-본문">...(중략)<br>&nbsp;주인공은 아버지의 갑작스러운 죽음을 계기로, 그가 남긴 집을 정리하며 복잡했던 관계를 되돌아봅니다. 집은 아버지가 남긴 물건들로 가득했고, 청소 과정에서 그는 아버지의 숨겨진 과거와 진실을 발견하며, 몰랐던 그의 모습을 마주합니다. 이로 인해 주인공은 단순히 집을 정리하는 것이 아니라 아버지와의 관계를 재조명하게 됩니다.<br><br>
+        &nbsp;결국 청소를 마친 그는 아버지의 죽음과 남긴 물건들에 대한 해석을 마치고, 한 사람으로서의 아버지를 이해하려는 노력을 끝냅니다. 마지막 장면에서 그는 아버지와의 갈등을 풀고 자신을 돌아보며 성숙해집니다. 책은 물리적 정리가 아닌, 삶의 흔적과 감정의 정리를 통해 죽음과 관계에 대한 깊은 성찰을 전합니다.</p>
+      <a href="https://product.kyobobook.co.kr/detail/S000000598167" target="_blank"><img id="죽은자의집청소-구매" src="images/purchasing/purchase_Cleaning.png"></a>
+    </div>
+  </div>
+  <img id="이처럼사소한것들openModal" src="images/archiving/SmallThingslikeThese.png">
+  <div class="Modal" id="이처럼사소한것들">
+    <div id="이처럼사소한것들-content">
+      <img src="images/book_cover/SmallThingslikeThese_cover.jpg" id="책표지15">
+      <p id="이처럼사소한것들-제목">이처럼 사소한 것들</p>
+      <p id="이처럼사소한것들-저자">클레어 키건<br>(Claire Keegan)</p>
+      <img id="사소-빈하트" src="images/heart_empty.png">
+      <img id="사소-빈책갈피" src="images/bookmark_empty.png">
+      <p id="이처럼사소한것들-본문">...(중략)<br>&nbsp;주인공은 아버지의 갑작스러운 죽음을 계기로 그의 집을 청소하며, 복잡했던 관계를 되돌아봅니다. 집은 아버지가 남긴 물건들로 가득했고, 그는 청소를 통해 아버지의 숨겨진 과거와 몰랐던 진실을 발견하며, 자신이 놓쳤던 감정과 관계를 재조명하게 됩니다.<br><br>
+        &nbsp;청소를 마친 뒤, 그는 아버지의 죽음을 받아들이고, 한 사람으로서의 아버지를 이해하려는 노력을 마칩니다. 마지막 장면에서는 아버지와의 갈등을 풀고 자신을 돌아보며 성숙한 태도를 취합니다. 책은 물리적 청소를 넘어 삶의 흔적과 감정의 정리를 통해 죽음과 관계에 대한 깊은 성찰을 담고 있습니다.</p>
+      <a href="https://product.kyobobook.co.kr/detail/S000000598167" target="_blank"><img id="이처럼사소한것들-구매" src="images/purchasing/purchase_SmallThingslikeThese.png"></a>
+    </div>
+  </div>
+
+<img id="내가사랑했던모든남자들에게openModal" src="images/archiving/ToAlltheBoys.png">
+<div class="Modal" id="내가사랑했던모든남자들에게">
+  <div id="내가사랑했던모든남자들에게-content">
+    <img src="images/book_cover/ToAlltheBoys_cover.jpg" id="책표지16">
+    <p id="내가사랑했던모든남자들에게-제목">내가 사랑했던<br>모든 남자들에게</p>
+    <p id="내가사랑했던모든남자들에게-저자">제니 한 (Jenny Han)</p>
+    <img id="내가-빈하트" src="images/heart_empty.png">
+    <img id="내가-빈책갈피" src="images/bookmark_empty.png">
+    <p id="내가사랑했던모든남자들에게-본문">...(중략)<br>&nbsp;주인공 라라 진은 과거 사랑했던 다섯 명의 남자들에게 쓴 비밀 편지가 예기치 않게 발송되면서 연애사가 모두 드러납니다. 그녀는 각기 다른 남자들과의 관계를 되돌아보며 진정한 사랑과 이별의 의미를 배우고, 그 관계들이 자신의 성장 과정의 일부였음을 깨닫게 됩니다.<br><br>
+      &nbsp;결국 라라 진은 과거의 사랑을 정리하고 자신에게 진정으로 중요한 사람이 누구인지 깨닫습니다. 편지로 시작된 사건은 그녀가 자신의 감정과 진짜 사랑을 찾아가는 여정을 선물하며, 마지막에 그녀는 피터와 조너선 사이에서 고민하다 자기 자신을 더 사랑하는 법을 배우며 이야기를 마무리합니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000001788141" target="_blank"><img id="내가사랑했던모든남자들에게-구매" src="images/purchasing/purchase_ToAlltheBoys.png"></a>
+  </div>
+</div>
+
+<img id="죄와벌openModal" src="images/archiving/CrimeandPunishment.png">
+<div class="Modal" id="죄와벌">
+  <div id="죄와벌-content">
+    <img src="images/book_cover/CrimeandPunishment_cover.jpg" id="책표지17">
+    <p id="죄와벌-제목">죄와 벌</p>
+    <p id="죄와벌-저자">표도르 도스토옙스키<br>(Fyodor Dostoevsky)</p>
+    <img id="죄-빈하트" src="images/heart_empty.png">
+    <img id="죄-빈책갈피" src="images/bookmark_empty.png">
+    <p id="죄와벌-본문">...(중략)<br>&nbsp;주인공 라스콜리니코프는 궁핍한 생활 속에서 자신만의 논리를 내세워 사회의 부조리를 극복하려 합니다. 그는 "위대한 사람은 도덕의 규범을 넘어설 수 있다"는 신념 아래 살인이라는 극단적인 선택을 하게 되지만, 이후 극심한 죄책감과 내적 갈등에 시달리며 점점 파멸로 치닫습니다. 여러 인물들과의 관계 속에서 그는 자신의 신념과 행동을 되돌아보며 인간의 본성과 도덕적 책임에 대해 깨닫게 됩니다.<br><br>
+      &nbsp;결국 라스콜리니코프는 자신의 죄를 인정하고 자수하며, 교도소에서 새로운 삶을 모색하게 됩니다. 그가 겪은 고통과 회한은 단순한 벌이 아닌, 인간으로서의 본질을 깨닫고 구원을 찾는 과정으로 이어집니다. 살인을 통해 시작된 이야기는 결국 그의 내면적 성장과 진정한 인간다움의 의미를 되새기게 하며 마무리됩니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000000575672" target="_blank"><img id="죄와벌-구매" src="images/purchasing/purchase_CrimeandPunishment.png"></a>
+  </div>
+</div>
+
+<img id="데미안openModal" src="images/archiving/Demian.png">
+<div class="Modal" id="데미안">
+  <div id="데미안-content">
+    <img src="images/book_cover/Demian_cover.jpg" id="책표지18">
+    <p id="데미안-제목">데미안</p>
+    <p id="데미안-저자">헤르만 헤세<br>(Hermann Hesse)</p>
+    <img id="데미안-빈하트" src="images/heart_empty.png">
+    <img id="데미안-빈책갈피" src="images/bookmark_empty.png">
+    <p id="데미안-본문">...(중략)<br>&nbsp;주인공 싱클레어는 어린 시절부터 선과 악이라는 두 세계 사이에서 혼란을 겪으며 정체성을 찾기 위해 갈등합니다. 평범한 가정에서 자랐지만, 동급생 크로머의 협박으로 어둠의 세계를 경험하며 고뇌에 빠집니다. 그러던 중 친구 데미안을 만나 선과 악의 경계를 초월한 새로운 관점을 배우고, 개인적인 삶의 의미를 탐구하게 됩니다.<br><br>
+      &nbsp;이후 싱클레어는 에바 부인과 피스토리우스 등 여러 인물을 통해 내면의 가능성과 진정한 자아를 발견합니다. 그는 '새'의 상징을 통해 과거의 속박을 벗어나 새로운 세계로 나아가려는 결심을 굳힙니다. 결국 데미안과의 작별 속에서도 그가 가르쳐준 삶의 방향을 따르며, 자신을 사랑하고 운명을 받아들이는 법을 배우며 이야기는 마무리됩니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000000620181" target="_blank"><img id="데미안-구매" src="images/purchasing/purchase_Demian.png"></a>
+  </div>
+</div>
+
+<img id="위대한개츠비openModal" src="images/archiving/TheGreatGatsby.png">
+<div class="Modal" id="위대한개츠비">
+  <div id="위대한개츠비-content">
+    <img src="images/book_cover/TheGreatGatsby_cover.jpg" id="책표지19">
+    <p id="개츠비-제목">위대한 개츠비</p>
+    <p id="개츠비-저자">F. 스콧 피츠제럴드<br>(F. Scott Fitzgerald)</p>
+    <img id="개츠비-빈하트" src="images/heart_empty.png">
+    <img id="개츠비-빈책갈피" src="images/bookmark_empty.png">
+    <p id="위대한개츠비-본문">...(중략)<br>&nbsp;제이 개츠비는 잃어버린 연인 데이지를 되찾기 위해 엄청난 부를 쌓고, 그녀가 살고 있는 집 맞은편 대저택에서 화려한 파티를 열며 그녀의 관심을 끌려 합니다. 개츠비와 데이지는 결국 재회하지만, 데이지는 남편 톰 뷰캐넌의 안정적인 삶에 더 끌립니다. 한편, 톰은 개츠비의 과거를 파헤쳐 그의 불법적인 부의 출처를 조롱하며 데이지를 자신의 편으로 되돌립니다.<br><br>
+      &nbsp;데이지가 몰던 차로 톰의 정부인 마틀이 죽는 사고가 발생하지만, 톰은 이를 개츠비의 책임으로 돌립니다. 분노한 마틀의 남편 윌슨은 개츠비를 찾아가 그를 총으로 쏜 뒤 스스로 목숨을 끊습니다. 개츠비의 장례식은 닉 캐러웨이를 제외하고 거의 아무도 참석하지 않으며, 데이지와 톰은 모든 혼란을 뒤로 한 채 떠납니다. 닉은 개츠비의 순수했던 꿈이 세상의 냉혹함에 짓밟혔음을 깨닫고 고향으로 돌아갑니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000000777565" target="_blank"><img id="위대한개츠비-구매" src="images/purchasing/purchase_TheGreatGatsby.png"></a>
+  </div>
+</div>
+
+<img id="앵무새죽이기openModal" src="images/archiving/ToKillaMockingbird.png">
+<div class="Modal" id="앵무새죽이기">
+  <div id="앵무새죽이기-content">
+    <img src="images/book_cover/ToKillaMockingbird_cover.jpg" id="책표지20">
+    <p id="앵무새죽이기-제목">앵무새 죽이기</p>
+    <p id="앵무새죽이기-저자">하퍼 리 (Harper Lee)</p>
+    <img id="앵무새-빈하트" src="images/heart_empty.png">
+    <img id="앵무새-빈책갈피" src="images/bookmark_empty.png">
+    <p id="앵무새죽이기-본문">...(중략)<br>&nbsp;스카웃 핀치와 오빠 젬은 변호사인 아버지 애티커스와 함께 메이콤 마을에서 평화로운 삶을 살고 있습니다. 그러나 애티커스가 백인 여성 메이엘라를 강간한 혐의로 기소된 흑인 톰 로빈슨의 변호를 맡으며 가족은 마을 사람들의 편견과 적대에 직면합니다. 스카웃과 젬은 아버지를 향한 비난과 모욕을 견디며 세상의 불공정함을 점점 깨닫게 됩니다.<br><br>
+      &nbsp;애티커스는 법정에서 메이엘라의 증언이 거짓임을 밝혀내지만, 인종차별에 물든 배심원단은 톰에게 유죄를 선고합니다. 결국 톰은 탈출을 시도하다 총에 맞아 죽고, 마을은 다시 평온을 되찾은 듯 보입니다. 한편, 스카웃과 젬은 자신들을 위협하던 인물에게 공격당하지만, 이웃집 은둔자 부 래들리의 도움으로 목숨을 구합니다. 이를 통해 스카웃은 사람을 이해하고 진정한 용기의 의미를 배웁니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000000581821" target="_blank"><img id="앵무새죽이기-구매" src="images/purchasing/purchase_ToKillaMockingbird.png"></a>
+  </div>
+</div>
+
+<img id="나는전설이다openModal" src="images/archiving/IAmLegend.png">
+<div class="Modal" id="나는전설이다">
+  <div id="나는전설이다-content">
+    <img src="images/book_cover/IAmLegend_cover.jpg" id="책표지21">
+    <p id="나는전설이다-제목">나는 전설이다</p>
+    <p id="나는전설이다-저자">리처드 매드슨<br>(Richard Matheson)</p>
+    <img id="전설-빈하트" src="images/heart_empty.png">
+    <img id="전설-빈책갈피" src="images/bookmark_empty.png">
+    <p id="나는전설이다-본문">...(중략)<br>&nbsp;로버트 네빌은 전염병으로 인해 인류가 흡혈귀 같은 생명체로 변한 세상에서 홀로 살아남습니다. 매일 낮에는 흡혈귀를 사냥하고 생존을 위해 보급품을 모으며, 밤에는 자신의 집에 틀어박혀 그들의 공격을 막아냅니다. 고독과 두려움 속에서도 그는 전염병의 원인을 밝히고 치료제를 찾기 위해 끊임없이 연구를 이어갑니다.<br><br>
+      &nbsp;어느 날, 네빌은 살아 있는 여성을 발견하며 희망을 갖지만, 그녀는 사실 흡혈귀와 공존하는 새로운 인류의 일원이었습니다. 결국 그는 새로운 사회의 적으로 낙인찍히고, 그들에게 체포당합니다. 죽음을 앞둔 네빌은 자신이 과거의 인간 세계에서는 영웅이었지만, 이제는 새로운 세상에서 전설적인 괴물로 기억될 존재임을 깨닫습니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000001277779" target="_blank"><img id="나는전설이다-구매" src="images/purchasing/purchase_IAmLegend.png"></a>
+  </div>
+</div>
+
+<img id="체르노빌의목소리openModal" src="images/archiving/VoicesfromChernobyl.png">
+<div class="Modal" id="체르노빌의목소리">
+  <div id="체르노빌의목소리-content">
+    <img src="images/book_cover/VoicesfromChernobyl_cover.jpg" id="책표지22">
+    <p id="체르노빌의목소리-제목">체르노빌의 목소리</p>
+    <p id="체르노빌의목소리-저자">리처드 매드슨<br>(Richard Matheson)</p>
+    <img id="체르노빌-빈하트" src="images/heart_empty.png">
+    <img id="체르노빌-빈책갈피" src="images/bookmark_empty.png">
+    <p id="체르노빌의목소리-본문">...(중략)<br>&nbsp;체르노빌 원전 사고는 평범했던 사람들의 삶을 한순간에 파괴했습니다. 폭발 직후, 사고를 수습하던 소방관들은 방사능에 노출되어 하나둘씩 쓰러지고, 그들의 가족들은 그들의 죽음을 지켜볼 수밖에 없었습니다. 마을 주민들은 사고의 심각성을 모른 채 일상을 이어가다 피난 명령을 받고 평생 살던 집을 떠나야 했습니다.<br><br>
+      &nbsp;한편, 방사능의 위험을 알면서도 생계를 위해 강제적으로 사고 현장에서 일한 사람들은 육체와 정신이 무너져 갔고, 피난민들은 새로운 곳에서 차별과 고립을 경험했습니다. 그들의 목소리를 통해 드러나는 것은 단순히 재난의 참상만이 아니라, 삶과 죽음, 그리고 인간의 존엄에 대한 질문입니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000001599378" target="_blank"><img id="체르노빌의목소리-구매" src="images/purchasing/purchase_VoicesfromChernobyl.png"></a>
+  </div>
+</div>
+
+<img id="노인과바다openModal" src="images/archiving/theoldmanandthesea.png">
+<div class="Modal" id="노인과바다">
+  <div id="노인과바다-content">
+    <img src="images/book_cover/TheOldManandtheSea_cover.jpg" id="책표지23">
+    <p id="노인과바다-제목">노인과 바다</p>
+    <p id="노인과바다-저자">어니스트 헤밍웨이<br>(Ernest Hemingway)</p>
+    <img id="노인-빈하트" src="images/heart_empty.png">
+    <img id="노인-빈책갈피" src="images/bookmark_empty.png">
+    <p id="노인과바다-본문">...(중략)<br>&nbsp;체르노빌 원전 사고는 평범했던 사람들의 삶을 한순간에 파괴했습니다. 폭발 직후, 사고를 수습하던 소방관들은 방사능에 노출되어 하나둘씩 쓰러지고, 그들의 가족들은 그들의 죽음을 지켜볼 수밖에 없었습니다. 마을 주민들은 사고의 심각성을 모른 채 일상을 이어가다 피난 명령을 받고 평생 살던 집을 떠나야 했습니다.<br><br>
+      &nbsp;한편, 방사능의 위험을 알면서도 생계를 위해 강제적으로 사고 현장에서 일한 사람들은 육체와 정신이 무너져 갔고, 피난민들은 새로운 곳에서 차별과 고립을 경험했습니다. 그들의 목소리를 통해 드러나는 것은 단순히 재난의 참상만이 아니라, 삶과 죽음, 그리고 인간의 존엄에 대한 질문입니다.</p>
+    <a href="https://product.kyobobook.co.kr/detail/S000000778275" target="_blank"><img id="노인과바다-구매" src="images/purchasing/purchase_theoldmanandthesea.png"></a>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

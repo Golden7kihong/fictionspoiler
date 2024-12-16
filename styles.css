@@ -143,125 +143,7 @@ body {
 #marginbox {
   height: 15.3vh;
 }
-#눈먼자들의도시bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#핑거스미스bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#오만과편견bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#어린왕자bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#나니아연대기bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#자살클럽bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#총균쇠bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#레미제라블bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#변신bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#멋진신세계bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#일구팔사bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#비밀의화원bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#죽은자의집청소bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#이처럼사소한것들bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#내가사랑했던모든남자들에게bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#죄와벌bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
-#데미안bookmark {
-  display: none;
-  position: relative;
-  width: 72.5vw;
-  margin-top: 2vh;
-  margin-left: 5.7vw;
-}
+
 #이용설명화살표 {
   position: absolute;
   width: 8vw;
@@ -277,6 +159,16 @@ body {
   font-size: 3vw;
   word-spacing: -0.3vw;
   color: #878787;
+}
+#눈먼자들의도시bookmark, #핑거스미스bookmark, #오만과편견bookmark, #어린왕자bookmark, 
+#나니아연대기bookmark, #자살클럽bookmark, #총균쇠bookmark, #레미제라블bookmark, #변신bookmark, 
+#멋진신세계bookmark, #일구팔사bookmark, #비밀의화원bookmark, #죽은자의집청소bookmark, #이처럼사소한것들bookmark, 
+#내가사랑했던모든남자들에게bookmark, #죄와벌bookmark, #데미안bookmark, #위대한개츠비bookmark, #앵무새죽이기bookmark {
+  display: none;
+  position: relative;
+  width: 72.5vw;
+  margin-top: 2vh;
+  margin-left: 5.7vw;
 }
 #눈먼자들의도시openModal {  /*1열*/
   position: absolute;
@@ -386,6 +278,18 @@ body {
   left: 22vw;
   top: 276vh;
 }
+#위대한개츠비openModal {     /*6열*/
+  position: absolute;
+  width: 14vw;
+  left: 78vw;
+  top: 294.4vh;
+}
+#앵무새죽이기openModal {     /*1열*/
+  position: absolute;
+  width: 14vw;
+  left: 8vw;
+  top: 307vh;
+}
 #overlay {
   display: none; /* 기본적으로 숨김 */
   position: fixed;
@@ -408,231 +312,9 @@ body {
   z-index: 20;
 }
 
-#눈먼자들의도시 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#핑거스미스 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#오만과편견 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#어린왕자 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#나니아연대기 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#자살클럽 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#총균쇠 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#레미제라블 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#변신 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#멋진신세계 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#일구팔사 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#비밀의화원 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#죽은자의집청소 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#이처럼사소한것들 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#내가사랑했던모든남자들에게 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#죄와벌 {
-  display: none;
-  position: fixed;
-  z-index: 20;
-  right: 8vw;
-  top: auto;
-  bottom: 0; /* 기본 위치를 화면 아래로 설정 */
-  width: 100%; /* 모달의 너비 */
-  height: 95%; /* 모달의 높이 */
-  border-radius: 15px 15px 0 0; /* 위쪽만 둥글게 */
-  background-color: rgba(255, 255, 255);
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
-  transform-origin: bottom; /* 애니메이션의 기준점을 아래로 설정 */
-}
-#데미안 {
+#눈먼자들의도시, #핑거스미스, #오만과편견, #어린왕자, #나니아연대기, #자살클럽, #총균쇠, #레미제라블, 
+#변신, #멋진신세계, #일구팔사, #비밀의화원, #죽은자의집청소, #이처럼사소한것들, #내가사랑했던모든남자들에게, 
+#죄와벌, #데미안, #위대한개츠비, #앵무새죽이기 {
   display: none;
   position: fixed;
   z-index: 20;
@@ -762,6 +444,20 @@ body {
   position: fixed;
   top: 0.5vh;
   left: 38vw;
+  font-size: 6vw;
+  font-weight: 500;
+}
+#개츠비-제목 {
+  position: fixed;
+  top: 0.5vh;
+  left: 41vw;
+  font-size: 6vw;
+  font-weight: 500;
+}
+#앵무새죽이기-제목 {
+  position: fixed;
+  top: 0.5vh;
+  left: 41vw;
   font-size: 6vw;
   font-weight: 500;
 }
@@ -901,211 +597,42 @@ body {
   font-weight: 400;
   line-height: 2.7vh;
 }
-#책표지1 {
+#개츠비-저자 {
+  position: fixed;
+  top: 7vh;
+  left: 41vw;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 2.7vh;
+}
+#앵무새죽이기-저자 {
+  position: fixed;
+  top: 7vh;
+  left: 41vw;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 2.7vh;
+}
+#책표지1, #책표지2, #책표지3, #책표지4, #책표지5, #책표지6, #책표지7, #책표지8, #책표지9, #책표지10, 
+#책표지11, #책표지12, #책표지13, #책표지14, #책표지15, #책표지16, #책표지17, #책표지18, #책표지19, 
+#책표지20 {
   position: fixed;
   height: 25vh;
   top: 4vh;
 }
-#책표지2 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지3 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지4 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지6 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지7 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지8 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지9 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지10 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지11 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지12 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지13 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지14 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지15 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지16 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지17 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#책표지18 {
-  position: fixed;
-  height: 25vh;
-  top: 4vh;
-}
-#눈먼자들의도시-본문 {
+#눈먼자들의도시-본문, #핑거스미스-본문, #오만과편견-본문, #어린왕자-본문, #나니아연대기-본문,#자살클럽-본문,
+#총균쇠-본문,#레미제라블-본문, #변신-본문, #멋진신세계-본문, #일구팔사-본문, #비밀의화원-본문, #죽은자의집청소-본문,
+#이처럼사소한것들-본문,#내가사랑했던모든남자들에게-본문, #죄와벌-본문, #데미안-본문, #위대한개츠비-본문, 
+#앵무새죽이기-본문 {
   position: fixed;
   margin-right: 5.4vw;
   top: 30vh;
   font-size: 3.4vw;
   word-spacing: -0.2vw;
 }
-#핑거스미스-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#오만과편견-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#어린왕자-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#나니아연대기-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#자살클럽-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#총균쇠-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#레미제라블-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#변신-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#멋진신세계-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#일구팔사-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#비밀의화원-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#죽은자의집청소-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#이처럼사소한것들-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#내가사랑했던모든남자들에게-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#죄와벌-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#데미안-본문 {
-  position: fixed;
-  margin-right: 5.4vw;
-  top: 30vh;
-  font-size: 3.4vw;
-  word-spacing: -0.2vw;
-}
-#눈먼자들의도시-구매 {
+#눈먼자들의도시-구매, #핑거스미스-구매, #오만과편견-구매, #어린왕자-구매, #나니아연대기-구매, #자살클럽-구매,
+#총균쇠-구매, #레미제라블-구매, #변신-구매, #멋진신세계-구매, #일구팔사-구매, #비밀의화원-구매, #죽은자의집청소-구매,
+#이처럼사소한것들-구매, #내가사랑했던모든남자들에게-구매, #죄와벌-구매, #데미안-구매, #위대한개츠비-구매, #앵무새죽이기-구매 {
   display: none;
   position: fixed;
   width: 65vw;
@@ -1113,185 +640,13 @@ body {
   margin-top: 71vh;
   transform: translateX(-50%);
 }
-#핑거스미스-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#오만과편견-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#어린왕자-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#나니아연대기-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#자살클럽-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#총균쇠-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#레미제라블-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#변신-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#멋진신세계-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#일구팔사-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#비밀의화원-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#죽은자의집청소-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#이처럼사소한것들-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#내가사랑했던모든남자들에게-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#죄와벌-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#데미안-구매 {
-  display: none;
-  position: fixed;
-  width: 65vw;
-  left: 50vw;
-  margin-top: 71vh;
-  transform: translateX(-50%);
-}
-#눈먼자들의도시-content {
+#눈먼자들의도시-content, #핑거스미스-content, #오만과편견-content, #어린왕자-content, #나니아연대기-content, 
+#자살클럽-content, #총균쇠-content, #레미제라블-content, #변신-content, #멋진신세계-content, 
+#일구팔사-content, #비밀의화원-content, #죽은자의집청소-content, #이처럼사소한것들-content, #내가사랑했던모든남자들에게-content, 
+#죄와벌-content, #데미안-content, #위대한개츠비-content, #앵무새죽이기-content{
   padding: 20px;
 }
-#핑거스미스-content {
-  padding: 20px;
-}
-#오만과편견-content {
-  padding: 20px;
-}
-#어린왕자-content {
-  padding: 20px;
-}
-#나니아연대기-content {
-  padding: 20px;
-}
-#자살클럽-content {
-  padding: 20px;
-}
-#총균쇠-content {
-  padding: 20px;
-}
-#레미제라블-content {
-  padding: 20px;
-}
-#변신-content {
-  padding: 20px;
-}
-#멋진신세계-content {
-  padding: 20px;
-}
-#일구팔사-content {
-  padding: 20px;
-}
-#비밀의화원-content {
-  padding: 20px;
-}
-#죽은자의집청소-content {
-  padding: 20px;
-}
-#이처럼사소한것들-content {
-  padding: 20px;
-}
-#내가사랑했던모든남자들에게-content {
-  padding: 20px;
-}
-#죄와벌-content {
-  padding: 20px;
-}
-#데미안-content {
-  padding: 20px;
-}
+
 #도시-빈하트 {
   position: fixed;
   width: 11vw;
@@ -1394,6 +749,23 @@ body {
   top: 23vh;
   left: 38vw;
 }
+#개츠비-빈하트 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 41vw;
+}
+#앵무새-빈하트 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 41vw;
+}
+
+/* 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 
+  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 
+  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 
+  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 */
 #도시-빈책갈피 {
   position: fixed;
   width: 11vw;
@@ -1495,4 +867,16 @@ body {
   width: 11vw;
   top: 23vh;
   left: 53vw;
+}
+#개츠비-빈책갈피 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 56vw;
+}
+#앵무새-빈책갈피 {
+  position: fixed;
+  width: 11vw;
+  top: 23vh;
+  left: 56vw;
 }

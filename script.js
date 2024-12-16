@@ -1159,6 +1159,7 @@ function closeDemianModal() {
   });
 }
 
+
 demianOpenButton.addEventListener("click", openDemianModal);
 
 overlay.addEventListener("click", () => {
@@ -1168,37 +1169,167 @@ overlay.addEventListener("click", () => {
     closeDemianModal();
   }
 });
+
+// "위대한개츠비" 모달 관련 변수
+const gatsbyModal = document.getElementById("위대한개츠비");
+const gatsbyOpenButton = document.getElementById("위대한개츠비openModal");
+
+// 위대한개츠비 모달관련
+function openGatsbyModal() {
+  overlay.style.display = "block";
+  gatsbyModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    gatsbyModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeGatsbyModal() {
+  gsap.to(gatsbyModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      gatsbyModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+gatsbyOpenButton.addEventListener("click", openGatsbyModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeGatsbyModal();
+  }
+});
+
+// "앵무새죽이기" 모달 관련 변수
+const mockModal = document.getElementById("앵무새죽이기");
+const mockOpenButton = document.getElementById("앵무새죽이기openModal");
+
+// 앵무새죽이기 모달관련
+function openMockModal() {
+  overlay.style.display = "block";
+  mockModal.style.display = "block";
+  lockScroll(); // 스크롤 잠금
+
+  gsap.fromTo(
+    overlay,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: "power2.out" }
+  );
+
+  gsap.fromTo(
+    mockModal,
+    { opacity: 0, y: "100%" },
+    {
+      duration: 0.5,
+      opacity: 1,
+      y: "10%",
+      ease: "power2.out"
+    }
+  );
+}
+
+function closeMockModal() {
+  gsap.to(mockModal, {
+    duration: 0.5,
+    opacity: 0,
+    y: "100%",
+    ease: "power2.in",
+    onComplete: () => {
+      mockModal.style.display = "none";
+    }
+  });
+
+  gsap.to(overlay, {
+    duration: 0.5,
+    opacity: 0,
+    ease: "power2.in",
+    onComplete: () => {
+      overlay.style.display = "none";
+      unlockScroll(); // 스크롤 해제
+    }
+  });
+}
+
+mockOpenButton.addEventListener("click", openMockModal);
+
+overlay.addEventListener("click", () => {
+  if (isFloatModalOpen) {
+    closeFloatModal();
+  } else {
+    closeMockModal();
+  }
+});
+
+
+
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+
+
+
 // 이처럼사소한것들!!!!하트와 책갈피 관련 변수
-const sasoheart = document.getElementById("사소-빈하트");
-const sasobookmark = document.getElementById("사소-빈책갈피");
-const sasopurchaseButton = document.getElementById("이처럼사소한것들-구매");
+const gatsbyheart = document.getElementById("개츠비-빈하트");
+const gatsbybookmark = document.getElementById("개츠비-빈책갈피");
+const gatsbypurchaseButton = document.getElementById("위대한개츠비-구매");
 // 초기 상태 설정
-let issasoHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
-let issasoBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+let isgatsbyHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let isgatsbyBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
 
 // 하트 클릭 이벤트
-sasoheart.addEventListener("click", function () {
-  issasoHeartFilled = !issasoHeartFilled; // 상태 토글
+gatsbyheart.addEventListener("click", function () {
+  isgatsbyHeartFilled = !isgatsbyHeartFilled; // 상태 토글
 
   // 하트 이미지 변경
-  if (issasoHeartFilled) {
-    sasoheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
-    sasopurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  if (isgatsbyHeartFilled) {
+    gatsbyheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    gatsbypurchaseButton.style.display = "block"; // 구매 버튼 보이기
   } else {
-    sasoheart.src = "images/heart_empty.png"; // 빈 하트 이미지
-    sasopurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+    gatsbyheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    gatsbypurchaseButton.style.display = "none"; // 구매 버튼 숨기기
   }
 });
 
 // 책갈피 클릭 이벤트
-sasobookmark.addEventListener("click", function () {
-  issasoBookmarkFilled = !issasoBookmarkFilled; // 상태 토글
+gatsbybookmark.addEventListener("click", function () {
+  isgatsbyBookmarkFilled = !isgatsbyBookmarkFilled; // 상태 토글
 
   // 책갈피 이미지 변경
-  if (issasoBookmarkFilled) {
-    sasobookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  if (isgatsbyBookmarkFilled) {
+    gatsbybookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
   } else {
-    sasobookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+    gatsbybookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
   }
 });
 
@@ -1747,6 +1878,83 @@ demianbookmark.addEventListener("click", function () {
   }
 });
 
+// 이처럼사소한것들!!!!하트와 책갈피 관련 변수
+const sasoheart = document.getElementById("사소-빈하트");
+const sasobookmark = document.getElementById("사소-빈책갈피");
+const sasopurchaseButton = document.getElementById("이처럼사소한것들-구매");
+// 초기 상태 설정
+let issasoHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let issasoBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+sasoheart.addEventListener("click", function () {
+  issasoHeartFilled = !issasoHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (issasoHeartFilled) {
+    sasoheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    sasopurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    sasoheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    sasopurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+sasobookmark.addEventListener("click", function () {
+  issasoBookmarkFilled = !issasoBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (issasoBookmarkFilled) {
+    sasobookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    sasobookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
+
+// 앵무새죽이기!!!!하트와 책갈피 관련 변수
+const mockheart = document.getElementById("앵무새-빈하트");
+const mockbookmark = document.getElementById("앵무새-빈책갈피");
+const mockpurchaseButton = document.getElementById("앵무새죽이기-구매");
+// 초기 상태 설정
+let ismockHeartFilled = false; // 하트 상태 (빈하트/꽉찬하트)
+let ismockBookmarkFilled = false; // 책갈피 상태 (빈책갈피/꽉찬책갈피)
+
+// 하트 클릭 이벤트
+mockheart.addEventListener("click", function () {
+  ismockHeartFilled = !ismockHeartFilled; // 상태 토글
+
+  // 하트 이미지 변경
+  if (ismockHeartFilled) {
+    mockheart.src = "images/heart_fill.png"; // 꽉찬 하트 이미지
+    mockpurchaseButton.style.display = "block"; // 구매 버튼 보이기
+  } else {
+    mockheart.src = "images/heart_empty.png"; // 빈 하트 이미지
+    mockpurchaseButton.style.display = "none"; // 구매 버튼 숨기기
+  }
+});
+
+// 책갈피 클릭 이벤트
+mockbookmark.addEventListener("click", function () {
+  ismockBookmarkFilled = !ismockBookmarkFilled; // 상태 토글
+
+  // 책갈피 이미지 변경
+  if (ismockBookmarkFilled) {
+    mockbookmark.src = "images/bookmark_fill.png"; // 꽉찬 책갈피 이미지
+  } else {
+    mockbookmark.src = "images/bookmark_empty.png"; // 빈 책갈피 이미지
+  }
+});
+
+
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+// 넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지  넘어가기 방지 //
+
+
+
 //눈먼자들의도시 북마크관련
 const cityBookmarkButton = document.getElementById("도시-빈책갈피");
 
@@ -1986,5 +2194,34 @@ demianBookmarkButton.addEventListener("click", function () {
     demianBookmarkImage.style.display = "none"; // 보이기
   } else {
     demianBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+// 위대한개츠비 북마크관련
+const gatsbyBookmarkButton = document.getElementById("개츠비-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const gatsbyBookmarkImage = document.getElementById("위대한개츠비bookmark");
+
+// 클릭 이벤트 추가
+gatsbyBookmarkButton.addEventListener("click", function () {
+  if (gatsbyBookmarkImage.style.display === "block") {
+    gatsbyBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    gatsbyBookmarkImage.style.display = "block"; // 숨기기
+  }
+});
+
+// 앵무새죽이기 북마크관련
+const mockBookmarkButton = document.getElementById("앵무새-빈책갈피");
+
+// 숨겨진 북마크 이미지 가져오기
+const mockBookmarkImage = document.getElementById("앵무새죽이기bookmark");
+
+// 클릭 이벤트 추가
+mockBookmarkButton.addEventListener("click", function () {
+  if (mockBookmarkImage.style.display === "block") {
+    mockBookmarkImage.style.display = "none"; // 보이기
+  } else {
+    mockBookmarkImage.style.display = "block"; // 숨기기
   }
 });

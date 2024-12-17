@@ -48,11 +48,25 @@ body {
 #교보문고 {
   position: absolute;
   width: 5vh;
-  margin-top: 16.3vh;
+  margin-top: 24.6vh;
   margin-left: 5.4vw;
   transform: rotate(270deg);
 }
 #밀리의서재 {
+  position: absolute;
+  width: 6.3vh;
+  margin-top: 16.3vh;
+  margin-left: 4.4vw;
+  transform: rotate(270deg);
+}
+#radin {
+  position: absolute;
+  width: 8vh;
+  margin-top: 33.9vh;
+  margin-left: 3.7vw;
+  transform: rotate(270deg);
+}
+#yes24 {
   position: absolute;
   width: 6.3vh;
   margin-top: 8vh;

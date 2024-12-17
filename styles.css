@@ -197,19 +197,49 @@ body {
   position: absolute;
   width: 14vw;
   left: 8vw;
-  top: 242.3vh;
+  top: 247.3vh;
+}
+#앵무새죽이기openModal {     /*1열*/
+  position: absolute;
+  width: 14vw;
+  left: 8vw;
+  top: 317vh;
+}
+#폭풍의언덕openModal {     /*1열*/
+  position: absolute;
+  width: 14vw;
+  left: 8vw;
+  top: 403vh;
 }
 #핑거스미스openModal {       /*2열*/
   position: absolute;
   width: 14vw;
   left: 22vw;
-  top: 165vh;
+  top: 160vh;
 }
 #총균쇠openModal {       /*2열*/
   position: absolute;
   width: 14vw;
   left: 22vw;
   top: 197.6vh;
+}
+#데미안openModal {     /*2열*/
+  position: absolute;
+  width: 14vw;
+  left: 22vw;
+  top: 281vh;
+}
+#체르노빌의목소리openModal {     /*2열*/
+  position: absolute;
+  width: 14vw;
+  left: 22vw;
+  top: 360.6vh;
+}
+#노르웨이의숲openModal {     /*2열*/
+  position: absolute;
+  width: 14vw;
+  left: 22vw;
+  top: 453.5vh;
 }
 #오만과편견openModal {       /*3열*/
   position: absolute;
@@ -221,7 +251,19 @@ body {
   position: absolute;
   width: 14vw;
   left: 36vw;
-  top: 210.3vh;
+  top: 215.3vh;
+}
+#죄와벌openModal {     /*3열*/
+  position: absolute;
+  width: 14vw;
+  left: 36vw;
+  top: 289vh;
+}
+#안나카레니나openModal {     /*3열*/
+  position: absolute;
+  width: 14vw;
+  left: 36vw;
+  top: 402.7vh;
 }
 #어린왕자openModal {     /*4열*/
   position: absolute;
@@ -233,13 +275,31 @@ body {
   position: absolute;
   width: 14vw;
   left: 50vw;
-  top: 214.7vh;
+  top: 219.7vh;
 }
-#이처럼사소한것들openModal {     /*6열*/
+#이처럼사소한것들openModal {     /*4열*/
   position: absolute;
   width: 14vw;
   left: 50vw;
-  top: 260vh;
+  top: 270vh;
+}
+#나는전설이다openModal {     /*4열*/
+  position: absolute;
+  width: 14vw;
+  left: 50vw;
+  top: 343.8vh;
+}
+#소년이온다openModal {     /*4열*/
+  position: absolute;
+  width: 14vw;
+  left: 50vw;
+  top: 409.8vh;
+}
+#채식주의자openModal {     /*5열*/
+  position: absolute;
+  width: 14vw;
+  left: 64vw;
+  top: 160vh;
 }
 #멋진신세계openModal {    /*5열*/
   position: absolute;
@@ -251,115 +311,55 @@ body {
   position: absolute;
   width: 14vw;
   left: 64vw;
-  top: 234vh;
-}
-#나니아연대기openModal {     /*6열*/
-  position: absolute;
-  width: 14vw;
-  left: 78vw;
-  top: 157vh;
-}
-#일구팔사openModal {     /*6열*/
-  position: absolute;
-  width: 14vw;
-  left: 78vw;
-  top: 256vh;
-}
-#죽은자의집청소openModal {     /*6열*/
-  position: absolute;
-  width: 14vw;
-  left: 78vw;
-  top: 198.3vh;
+  top: 239vh;
 }
 #내가사랑했던모든남자들에게openModal {     /*5열*/
   position: absolute;
   width: 14vw;
   left: 64vw;
-  top: 283vh;
+  top: 293vh;
 }
-#죄와벌openModal {     /*3열*/
+#노인과바다openModal {     /*5열*/
   position: absolute;
   width: 14vw;
-  left: 36vw;
-  top: 279vh;
+  left: 64vw;
+  top: 362vh;
 }
-#데미안openModal {     /*2열*/
+#살인자들의섬openModal {     /*5열*/
   position: absolute;
   width: 14vw;
-  left: 22vw;
+  left: 64vw;
+  top: 430.5vh;
+}
+#나니아연대기openModal {     /*6열*/
+  position: absolute;
+  width: 14vw;
+  left: 78vw;
+  top: 167vh;
+}
+#죽은자의집청소openModal {     /*6열*/
+  position: absolute;
+  width: 14vw;
+  left: 78vw;
+  top: 213.3vh;
+}
+#일구팔사openModal {     /*6열*/
+  position: absolute;
+  width: 14vw;
+  left: 78vw;
   top: 276vh;
 }
 #위대한개츠비openModal {     /*6열*/
   position: absolute;
   width: 14vw;
   left: 78vw;
-  top: 294.4vh;
-}
-#앵무새죽이기openModal {     /*1열*/
-  position: absolute;
-  width: 14vw;
-  left: 8vw;
-  top: 307vh;
-}
-#나는전설이다openModal {     /*4열*/
-  position: absolute;
-  width: 14vw;
-  left: 50vw;
-  top: 328.8vh;
-}
-#체르노빌의목소리openModal {     /*2열*/
-  position: absolute;
-  width: 14vw;
-  left: 22vw;
-  top: 350.6vh;
-}
-#채식주의자openModal {     /*5열*/
-  position: absolute;
-  width: 14vw;
-  left: 64vw;
-  top: 165vh;
-}
-#노인과바다openModal {     /*5열*/
-  position: absolute;
-  width: 14vw;
-  left: 64vw;
-  top: 347vh;
-}
-#안나카레니나openModal {     /*3열*/
-  position: absolute;
-  width: 14vw;
-  left: 36vw;
-  top: 387.7vh;
-}
-#폭풍의언덕openModal {     /*1열*/
-  position: absolute;
-  width: 14vw;
-  left: 8vw;
-  top: 388vh;
-}
-#소년이온다openModal {     /*4열*/
-  position: absolute;
-  width: 14vw;
-  left: 50vw;
-  top: 389.8vh;
+  top: 319.4vh;
 }
 #두도시이야기openModal {     /*6열*/
   position: absolute;
   width: 14vw;
   left: 78vw;
-  top: 392vh;
-}
-#살인자들의섬openModal {     /*5열*/
-  position: absolute;
-  width: 14vw;
-  left: 64vw;
-  top: 410.5vh;
-}
-#노르웨이의숲openModal {     /*2열*/
-  position: absolute;
-  width: 14vw;
-  left: 22vw;
-  top: 438.5vh;
+  top: 422vh;
 }
 #overlay {
   display: none; /* 기본적으로 숨김 */
@@ -1239,6 +1239,6 @@ body {
   font-size: 5vw;
   left: 50%;
   transform: translateX(-50%);
-  top: 530vh;
+  top: 565vh;
   padding: 3.8vh;
 }

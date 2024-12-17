@@ -4,12 +4,349 @@ window.addEventListener('load', function () {
 
   setTimeout(function () {
     loading.style.display = 'none';
-  }, 6000);
+  }, 300);
 });
 
 // GSAP 애니메이션 초기화
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.to("#눈먼자들의도시openModal", {
+  y: "10%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#눈먼자들의도시openModal", // 트리거 요소
+    start: "top 50%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#자살클럽openModal", {
+  y: "10%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#자살클럽openModal", // 트리거 요소
+    start: "top 70%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#앵무새죽이기openModal", {
+  y: "10%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#앵무새죽이기openModal", // 트리거 요소
+    start: "top 70%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -80%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#폭풍의언덕openModal", {
+  y: "10%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#폭풍의언덕openModal", // 트리거 요소
+    start: "top 80%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#핑거스미스openModal", {
+  y: "15%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#핑거스미스openModal", // 트리거 요소
+    start: "top 80%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#총균쇠openModal", {
+  y: "6%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#총균쇠openModal", // 트리거 요소
+    start: "top 80%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#데미안openModal", {
+  y: "8%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#데미안openModal", // 트리거 요소
+    start: "top 90%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#체르노빌의목소리openModal", {
+  y: "8%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#체르노빌의목소리openModal", // 트리거 요소
+    start: "top 95%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#노르웨이의숲openModal", {
+  y: "15%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#노르웨이의숲openModal", // 트리거 요소
+    start: "top 100%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -85%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#오만과편견openModal", {
+  y: "14%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#오만과편견openModal", // 트리거 요소
+    start: "top 80%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#레미제라블openModal", {
+  y: "12%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#레미제라블openModal", // 트리거 요소
+    start: "top 85%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#죄와벌openModal", {
+  y: "10%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#죄와벌openModal", // 트리거 요소
+    start: "top 90%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#안나카레니나openModal", {
+  y: "18%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+    trigger: "#안나카레니나openModal", // 트리거 요소
+    start: "top 95%", // 스크롤 시작 지점 (화면의 80% 아래)
+    end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+    scrub: true, // 스크롤에 따라 부드럽게 동작
+    markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+// 애니메이션 설정
+gsap.to("#어린왕자openModal", {
+  y: "16%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#어린왕자openModal", // 트리거 요소
+  start: "top 80%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#변신openModal", {
+  y: "17%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#변신openModal", // 트리거 요소
+  start: "top 90%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#이처럼사소한것들openModal", {
+  y: "15%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#이처럼사소한것들openModal", // 트리거 요소
+  start: "top 90%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#나는전설이다openModal", {
+  y: "17%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#나는전설이다openModal", // 트리거 요소
+  start: "top 95%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -120%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#소년이온다openModal", {
+  y: "17%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#소년이온다openModal", // 트리거 요소
+  start: "top 95%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -120%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#채식주의자openModal", {
+  y: "13%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#채식주의자openModal", // 트리거 요소
+  start: "top 83%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#멋진신세계openModal", {
+  y: "15%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#멋진신세계openModal", // 트리거 요소
+  start: "top 87%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#비밀의화원openModal", {
+  y: "15%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#비밀의화원openModal", // 트리거 요소
+  start: "top 90%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -110%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+
+gsap.to("#내가사랑했던모든남자들에게openModal", {
+  y: "17%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#내가사랑했던모든남자들에게openModal", // 트리거 요소
+  start: "top 95%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -110%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#노인과바다openModal", {
+  y: "27%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#노인과바다openModal", // 트리거 요소
+  start: "top 97%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -110%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#살인자들의섬openModal", {
+  y: "35%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#살인자들의섬openModal", // 트리거 요소
+  start: "top 100%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -70%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#나니아연대기openModal", {
+  y: "13%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#나니아연대기openModal", // 트리거 요소
+  start: "top 100%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#죽은자의집청소openModal", {
+  y: "16%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#죽은자의집청소openModal", // 트리거 요소
+  start: "top 95%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#일구팔사openModal", {
+  y: "30%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#일구팔사openModal", // 트리거 요소
+  start: "top 100%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#위대한개츠비openModal", {
+  y: "13%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#위대한개츠비openModal", // 트리거 요소
+  start: "top 80%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -100%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
+gsap.to("#두도시이야기openModal", {
+  y: "32%", // 왼쪽으로 이동
+  opacity: 1, // 점차 투명해짐
+  scrollTrigger: {
+  trigger: "#두도시이야기openModal", // 트리거 요소
+  start: "top 100%", // 스크롤 시작 지점 (화면의 80% 아래)
+  end: "top -70%", // 스크롤 종료 지점 (화면의 20% 아래)
+  scrub: true, // 스크롤에 따라 부드럽게 동작
+  markers: false, // 디버그용 마커 (필요 없으면 제거)
+  },
+});
 // 애니메이션 설정
 gsap.to("#Main-title", {
   x: "-100%", // 왼쪽으로 이동

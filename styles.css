@@ -1235,9 +1235,10 @@ body {
 #end {
   position: absolute;
   color: #ffffff;
+  font-weight: 300;
   font-size: 5vw;
   left: 50%;
   transform: translateX(-50%);
-  top: 550vh;
+  top: 530vh;
   padding: 3.8vh;
 }
